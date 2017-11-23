@@ -1,0 +1,14 @@
+*.aux
+*.dvi
+*.log
+*.pdf
+*.synctex.gz
+*.synctex.gz(busy)
+*.toc
+*.log
+*.lof
+*.lot
+*.out
+*.odt#
+latex_shortcuts
+
