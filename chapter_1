@@ -34,22 +34,27 @@ Ekonometrię finansową można więc dogłębniej zdefiniować jako zastosowanie
 Analizy wspomagające proces podejmowania decyzji na rynku kapitałowym może być podzielony na: analizę techniczną i analizę fundamentalną.
 
 \subsection{Analiza techniczna}
+Analiza techniczna skupia się głównie na bezpośrednich, mierzalnych sposobach oceny aktualnej kondycji rynku. Podejmuje analizę jego aktywności, w tym cen, ilości transakcji w danym okresie czasu, poprzez badanie wzajemnych zależności oraz wzorców.\\
+Analiza techniczna oparta jest na trzech zasadach:\cite{tech_analysis_pillars}
+\begin{itemize}
+\item Wszystkie czynniki, które wpływają na rynkową cenę instrumentu finansowego znajdują swoje odzwieciedlenie w cenie tego instrumentu
+\item Ceny zawsze znajdują się w określonych trendach
+\item Historia się powtarza - założenie zakładające, że ceny na rynku zmieniają się i powtarzają zgodnie z określonymi wzorami, które wydarzyły się w przeszłości
+\end{itemize}
+
+
+
 
 
 \subsection{Analiza fundamentalna}
 
 
-\subsection{Cele analizy danych giełdowych}
-
-\subsection{Analiza regresji}
-
 \section{Statystyczne metody analizy danych}
 
+\subsection{Klasyfikacja}
+
 \subsection{Analiza regresji}
 
-\subparagraph{Regresja liniowa}
-
-\subsection{Analiza regresji w pakiecie scikit-learn}
 
 
 
