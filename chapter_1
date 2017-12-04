@@ -1,10 +1,7 @@
 %% ------- ROZDZIAŁ 1 ------- %%
 
 \chapter{Analiza danych statystycznych}
-
-\section{Dane giełdowe}
-
-\subsection{Definicje związane z giełdą}
+\section{Rynki finansowe}
 Giełda jest zbiorem instytucji finansowych, w których odbywa się wymiana papierów wartościowych pomiędzy kupującymi i sprzedającymi\cite{stock_market}.
 Powinna ona koncentrować popyt i podaż na papiery wartościowe, co prowadzi do kształtowania do powszechnego kursu.
 Zapewnia ona również bezpieczny i uregulowany przebieg transakcji oraz upowszechnia informacje, które umożliwiają ocenę aktualnej wartości papierów wartościowych.
@@ -24,13 +21,23 @@ a także do otrzymywania stałego dochodu określonego odsetkami\cite{obligacje}
 
 \textcolor{red}{Dodać akapit o danych giełdowych!}
 
-\subsection{Źródła danych giełdowych}
-Dane giełdowe są dostępne do publicznego wglądu za darmo w różnych serwisach internetowych. Jednym z największych serwisów udostępniających takie dane jest serwis Google Finance.
-Udostępnia on różnego rodzaju
+\section{Ekonometria i metody analizy danych finansowych}
+Podejmowanie decyzji inwestycyjnych na giełdzie papierów wartościowych nieuchronnie wiąże się z ryzykiem straty zainwestowanego kapitału. Zmniejszenie tego ryzyka jest więc kluczowym działaniem inwestorów, którzy oczekują wymiernych zwrotów z prowadzonych inwestycji.
+Ekonometria jako nauka zajmuje się dostarczeniem metod i narzędzi potrzebnych do przeprowadzenia niezbędnych analiz rynku, dzięki którym potencjalny inwestor może ocenić ryzyko inwestycyjne oraz je zminimalizować.
+Rozwój gospodarki i rynków światowych wymusza niejako wzrost zapotrzebowania na coraz to bardziej zaawansowane i dokładne narzędzia, które wspomagają podejmowanie decyzji.
+Na decyzje z kolei mają wpływ czynniki, które można podzielić na jakościowe i ilościowe\cite{ekonometria}.\\
 
-\subsection{Opis danych giełdowych}
+Czynniki jakościowe, ze względy na swoją naturę i duży wpływ osób dokonujących analizy na wyniki końcowe, nie mogą podlegać bezpośredniej mierzalności, przez co uważane są za subiektywne\cite{ekonometria}.
+Czynniki ilościowe natomiast umożliwiają ocenę na podstawie danych liczbowych, ich wzajemnych powiązań i relacji. Są więc uważane za bardziej obiektywne, lecz nie mniej ważne.\\
 
-\section{Metody analizy danych giełdowych}
+Ekonometrię finansową można więc dogłębniej zdefiniować jako zastosowanie metod ilościowych do analizy zjawisk na rynku finansowym\cite{ekonometria}.
+Analizy wspomagające proces podejmowania decyzji na rynku kapitałowym może być podzielony na: analizę techniczną i analizę fundamentalną.
+
+\subsection{Analiza techniczna}
+
+
+\subsection{Analiza fundamentalna}
+
 
 \subsection{Cele analizy danych giełdowych}
 
