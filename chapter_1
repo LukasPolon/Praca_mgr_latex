@@ -27,11 +27,21 @@ Ekonometria jako nauka zajmuje się dostarczeniem metod i narzędzi potrzebnych 
 Rozwój gospodarki i rynków światowych wymusza niejako wzrost zapotrzebowania na coraz to bardziej zaawansowane i dokładne narzędzia, które wspomagają podejmowanie decyzji.
 Na decyzje z kolei mają wpływ czynniki, które można podzielić na jakościowe i ilościowe\cite{ekonometria}.\\
 
-Czynniki jakościowe, ze względy na swoją naturę i duży wpływ osób dokonujących analizy na wyniki końcowe, nie mogą podlegać bezpośredniej mierzalności, przez co uważane są za subiektywne\cite{ekonometria}.
+Czynniki jakościowe, ze względu na swoją naturę i duży wpływ osób dokonujących analizy, nie mogą podlegać bezpośredniej mierzalności, przez co uważane są za subiektywne\cite{ekonometria}.
 Czynniki ilościowe natomiast umożliwiają ocenę na podstawie danych liczbowych, ich wzajemnych powiązań i relacji. Są więc uważane za bardziej obiektywne, lecz nie mniej ważne.\\
 
-Ekonometrię finansową można więc dogłębniej zdefiniować jako zastosowanie metod ilościowych do analizy zjawisk na rynku finansowym\cite{ekonometria}.
-Analizy wspomagające proces podejmowania decyzji na rynku kapitałowym może być podzielony na: analizę techniczną i analizę fundamentalną.
+Ekonometrię finansową można więc dogłębniej zdefiniować jako zastosowanie metod ilościowych do analizy zjawisk na rynku finansowym\cite{ekonometria}.\\
+Podstawowym krokiem, który należy postawić podczas analizy ekonometrycznej jest określenie modelu. Model jest uproszczoną reprezentacją rzeczywistego procesu, który podlega naszym badaniom\cite{ekonometria_model}.
+Powinien więc możliwie dokładnie opisywać badane procesy, z uwzględnieniem właściwych zmiennych. Proste modele z reguły upraszczają rzeczywistość, co w połączeniu z przyjętymi założeniami niekoniecznie będącymi zgodne ze stanem faktycznym pozwalają domniemywać wadliwość modelu.
+Jednakże dokładność modelu często zależy od dostępności danych. Jedna z koncepcji konstruowania modelu zakłada, że warto rozpoczynać badania od modelu prostego i w miarę poznawania dodatkowych danych, sukcesywnie zwiększać jego złożoność.\\
+Model ekonomiczny składa się z\cite{ekonometria_model}:
+\begin{itemize}
+\item Zbioru równań behawioralnych, czyli opisujących zachowanie
+\item Opisu możliwych błędów pomiaru lub obserwacji
+\item Specyfikacji rozkładu prawdopodobieństwa zakłóceń i błędów pomiaru
+\end{itemise}
+
+Analizy wspomagające proces podejmowania decyzji na rynku kapitałowym mogą być podzielone na: analizę techniczną i analizę fundamentalną.
 
 \subsection{Analiza techniczna}
 Analiza techniczna skupia się głównie na bezpośrednich, mierzalnych sposobach oceny aktualnej kondycji rynku. Podejmuje analizę jego aktywności, w tym cen, ilości transakcji w danym okresie czasu, poprzez badanie wzajemnych zależności oraz wzorców.\\
@@ -41,6 +51,7 @@ Analiza techniczna oparta jest na trzech zasadach:\cite{tech_analysis_pillars}
 \item Ceny zawsze znajdują się w określonych trendach
 \item Historia się powtarza - założenie zakładające, że ceny na rynku zmieniają się i powtarzają zgodnie z określonymi wzorami, które wydarzyły się w przeszłości
 \end{itemize}
+a
 
 
 
