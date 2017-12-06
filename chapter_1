@@ -30,16 +30,18 @@ Na decyzje z kolei mają wpływ czynniki, które można podzielić na jakościow
 Czynniki jakościowe, ze względu na swoją naturę i duży wpływ osób dokonujących analizy, nie mogą podlegać bezpośredniej mierzalności, przez co uważane są za subiektywne\cite{ekonometria}.
 Czynniki ilościowe natomiast umożliwiają ocenę na podstawie danych liczbowych, ich wzajemnych powiązań i relacji. Są więc uważane za bardziej obiektywne, lecz nie mniej ważne.\\
 
+\subsection{Model ekonometryczny}
 Ekonometrię finansową można więc dogłębniej zdefiniować jako zastosowanie metod ilościowych do analizy zjawisk na rynku finansowym\cite{ekonometria}.\\
 Podstawowym krokiem, który należy postawić podczas analizy ekonometrycznej jest określenie modelu. Model jest uproszczoną reprezentacją rzeczywistego procesu, który podlega naszym badaniom\cite{ekonometria_model}.
 Powinien więc możliwie dokładnie opisywać badane procesy, z uwzględnieniem właściwych zmiennych. Proste modele z reguły upraszczają rzeczywistość, co w połączeniu z przyjętymi założeniami niekoniecznie będącymi zgodne ze stanem faktycznym pozwalają domniemywać wadliwość modelu.
 Jednakże dokładność modelu często zależy od dostępności danych. Jedna z koncepcji konstruowania modelu zakłada, że warto rozpoczynać badania od modelu prostego i w miarę poznawania dodatkowych danych, sukcesywnie zwiększać jego złożoność.\\
-Model ekonomiczny składa się z\cite{ekonometria_model}:
+
+Model ekonometryczny składa się z\cite{ekonometria_model}:
 \begin{itemize}
-\item Zbioru równań behawioralnych, czyli opisujących zachowanie
-\item Opisu możliwych błędów pomiaru lub obserwacji
-\item Specyfikacji rozkładu prawdopodobieństwa zakłóceń i błędów pomiaru
-\end{itemise}
+\item Zbioru równań behawioralnych, czyli opisujących zachowanie\\
+\item Opisu możliwych błędów pomiaru lub obserwacji\\
+\item Specyfikacji rozkładu prawdopodobieństwa zakłóceń i błędów pomiaru\\
+\end{itemize}
 Model jest częścią algorytmu analizy ekonometrycznej, który został przedstawiony na diagramie 1.1.
 
 \begin{figure}
@@ -49,22 +51,55 @@ Model jest częścią algorytmu analizy ekonometrycznej, który został przedsta
 \label{fig:Analiza ekonometryczna}
 \end{figure}
 
-Analizy wspomagające proces podejmowania decyzji na rynku kapitałowym mogą być podzielone na: analizę techniczną i analizę fundamentalną.
+Pierwszymi krokami jakie należy wykonać podczas analizy eknometrycznej są opracowanie teorii, modelu, oraz skompletowanie niezbędnych danych. Następnie model podlega estymacji i weryfikacji, co pozwala na ocenę jego poprawności.
+Kolejne iteracje tego algorytmu prowadzą do opracowania dokłądnego modelu, który w jak najlepszym stopniu opisuje zjawisko, które jest aktualnie badane.
 
 \subsection{Analiza techniczna}
 Analiza techniczna skupia się głównie na bezpośrednich, mierzalnych sposobach oceny aktualnej kondycji rynku. Podejmuje analizę jego aktywności, w tym cen, ilości transakcji w danym okresie czasu, poprzez badanie wzajemnych zależności oraz wzorców.\\
-Analiza techniczna oparta jest na trzech zasadach:\cite{tech_analysis_pillars}
+Oparta jest na trzech zasadach:\cite{tech_analysis_pillars}
 \begin{itemize}
-\item Wszystkie czynniki, które wpływają na rynkową cenę instrumentu finansowego znajdują swoje odzwieciedlenie w cenie tego instrumentu
-\item Ceny zawsze znajdują się w określonych trendach
-\item Historia się powtarza - założenie zakładające, że ceny na rynku zmieniają się i powtarzają zgodnie z określonymi wzorami, które wydarzyły się w przeszłości
+\item Wszystkie czynniki, które wpływają na rynkową cenę instrumentu finansowego znajdują swoje odzwieciedlenie w cenie tego instrumentu\\
+\item Ceny zawsze podlegają określonym trendom\\
+\item Historia się powtarza - założenie zakładające, że ceny na rynku zmieniają się i powtarzają zgodnie z określonymi wzorami, które wydarzyły się w przeszłości\\
 \end{itemize}
 
+Klasyczna analiza techniczna opiera się na teorii Dowa, która jest pierwszą teorią stanowiącą fundament dla analizy tego typu. Założenia teorii Dowa to\cite{analiza_fundamentalna_techniczna}:
+\begin{itemize}
+\item Średnie giełdowe dyskontują wszystko\\
+\item Istnieją trzy kategorie trendu rynkowego: trendy główne, wtórne i mniejsze\\
+\item Wolumen potwierdza trend\\
+\end{itemize}
 
+Główny trend rynkowy jest trendem o największym znaczeniu, trwającym zwykle od roku do kilkunastu lat. Trendy mniejsze, trwające do trzech tygodni, są marginalizowane i utożsamiane z czynnikami losowymi, nie mającymi realnego wpływu na trend główny.
+Trendy wtórne natomiast korygują trendy główne i trwają od kilku tygodni do trzech miesięcy. Są one szczególnie ważne i utożsamiane z korektą techniczną trendu głównego.\\
 
+Trend główny dzieli się na trzy fazy. Pierwsza faza, zwana fazą akumulacji\cite{analiza_fundamentalna_techniczna} oznacza, iż podczas hossy inwestorzy skupują akcje. Faza druga charakteryzuje się przetrzymaniem akcji i niepodejmowaniem działań przez inwestorów, w oczekiwaniu na dalsze informacje.
+Trzecia faza natomiast związana jest ze sprzedażą akcji, a także z większym zainteresowaniem inwestorów indywidualnych, którzy w tym momencie zaczynają skupować akcje.\\
+W przypadku bessy, która również dzieli się na trzy fazy, faza pierwsza oznacza wyprzedaż akcji przez wtajemniczonych inwestorów, faza druga jest nasileniem tej tendencji, a faza trzecia charakteryzuje się stagnacją.\\
+
+Z opisu przebiegów trendu głównego podczas hossy i bessy wynika, że związany jest on bezpośrednio z wartościami wolumenu obrotów. Wolumen jest to łączna liczba transakcji przeprowadzonych dla danego papieru wartościowego.
+Tak więc, jeśli wraz ze wzrostem ceny, wzrasta wolumen obrotów, można potwierdzić występowanie hossy\cite{analiza_fundamentalna_techniczna}.\\
+
+Narzędzia analizy technicznej, ponieważ bazują między innymi na teorii Dowa, są najczęściej wykorzystywane do analizy trendów, ich identyfikacji oraz wychwytywania oznak ich odwrócenia.
 
 
 \subsection{Analiza fundamentalna}
+Analiza fundamentalna, w odróżnieniu od analizy technicznej, ma na celu opis danej spółki oraz jej otoczenia.
+Czynniki brane pod uwagę w tego typu analizie to najczęściej sytuacja gospodarcza kraju, czyli między innymi poziom PKB, inflacja, czy wielkość rynku\cite{analiza_fundamentalna_techniczna}, oraz sytuacja gospodarcza samego przedsiębiorstwa.\\
+
+Jednym z najstarszych lecz wciąż skutecznych sposobów mierzenia pozycji danego przedsiębiorstwa na rynku jest macierz BCG (Boston Consulting Group).
+Pozwala ona na przypisanie przedsiębiorstwa do jednej z czterech kategorii:
+\begin{itemize}
+\item Gwiazdy
+\item Obiecujące
+\item Dojne krowy
+\item Psy
+\end{itemize}
+
+Kategoria pierwsza, czyli gwiazdy, to przedsiębiorstwa z największym udziałem sprzedaży w odniesieniu do całego rynku, a także o najwyższej pozycji konkurencyjnej.
+Przedsiębiorstwa kategorii drugiej charakteryzują się szybkim wzrostem sprzedaży, lecz równolegle intensywnie inwestujące, przez co są pozbawione zapasów kapitału.
+Dojne krowy są stosunkowo podobne do przedsiębiorstw kategorii drugiej, lecz w ich przypadku intensywność inwestycyjna jest minimalna. Są zazwyczaj stabilne, a ich udział w rynku pozostaje na stałym poziomie.
+Kategoria czwarta określa podmioty nieobiecujące, które posiadają niewielki udział w rynku, wraz z brakiem perspektyw do rozwoju.
 
 
 \section{Statystyczne metody analizy danych}
