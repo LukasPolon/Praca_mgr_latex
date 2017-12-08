@@ -164,15 +164,47 @@ h_{MAP} = arg \stackrel{h \in H}{max} Pr(h \mid T)
 \end{align}
 \end{ceqn}
 
-\subsubsection Drzewa decyzyjne
+\subsubsection{Drzewa decyzyjne}
 Algorytmy drzew decyzyjnych są jednymi z najszerzej stosowanych metod analizy danych za pomocą uczenia maszynowego.
 Polegają na sekwencyjnym podziale danego zbioru danych na dwa rozłączne podzbiory w taki sposób, aby oba podzbiory były możliwie jednorodne\cite{drzewa_decyzyjne}.
-Działanie drzewa decyzyjnego ilustruje schemat 1.2.
+Działanie drzewa decyzyjnego ilustruje Rysunek 1.3.\\
 
+Wierzchołki drzewa oznaczone literą \textit{t} są nazywane węzłami i stanowią podzbiory zbioru danych. Węzły oznaczone okręgami są węzłami wewnętrznymi, natomiast kwadratami - węzłami zewnętrznymi.
+Dla każdego węzła określona jest funkcja podziału, która każdemu elementowi do niego należącymi przypisuje jedną z wartości : \textit{Prawdę} lub \textit{Fałsz}.\\
+Klasyfikatory zbudowane na podstawie drzewa decyzyjnego mają więc postać\cite{drzewa_decyzyjne}:
+\begin{ceqn}
+\begin{align}
+d_{T}(x) = \sum_{t \in T^{~}}ind(t)I(x \in t)
+\end{align}
+\end{ceqn}
 
+\begin{figure}
+\centering
+\includegraphics[width=10cm]{pictures/decision_tree.png}
+\caption{Drzewo decyzyjne}
+\label{fig:Drzewo decyzyjne}
+\end{figure}
+
+Zaletą algorytmów drzew decyzyjnych jest niewątpliwie możliwość bezproblemowego wykorzystania zarówno jakościowych jak i ilościowych do klasyfikacji. Algorytmy te wykazują również odporność na sytuacje braku części zmiennych, a także na obserwacje odstające\cite{drzewa_decyzyjne}.
 
 
 \subsection{Analiza regresji}
+Jedną z metod umożliwiających predykcję wartości na podstawie szeregu innych jest analiza regresji.
+Polega ona na odszukiwaniu i opisie związków między zmiennymi, co prowadzi do stworzenia modelu, czyli równania regresji, które pozwala na analizę struktury zależności i umożliwia prognozowanie.\\
+
+Dobór odpowiedniego modelu regresji jest bardzo istotny ze względu na różnice między nimi. Spośród wielu modeli można wyróżnić:
+\begin{itemize}
+\item Model regresji liniowej
+\end{itemize}
+
+\subsubsection{Regresja liniowa}
+Model regresji liniowej jest to funkcja liniowa zmiennych objaśniających i składnika losowego\cite{statystyka}. Ma postać:
+\begin{ceqn}
+\begin{align}
+Y = \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{2} + ... + \beta_{k}X_{k} + \xi
+\end{align}
+\end{ceqn}
+
 
 
 
