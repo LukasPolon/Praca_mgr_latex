@@ -105,8 +105,18 @@ Kategoria czwarta określa podmioty nieobiecujące, które posiadają niewielki 
 \section{Statystyczne metody analizy danych}
 
 \subsection{Klasyfikacja}
+Klasyfikacja jest jednym z najbardziej podstawowych metod analizy danych statystycznych.
+Jej głównym zadaniem jest przyporządkowanie klas do obiektów z danego zbioru danych. Zagadnienia uczenia maszynowego dzielą klasyfikację na nadzorowaną i klasyfikację bez nadzoru\cite{intro_machine_learning}.
+Algorytmy klasyfikacji nadzorowanej charakteryzują się dostępnością testowego zbioru danych z przypisanymi klasami, który spełnia rolę wzorca dla pozostałych danych.
+Algorytm klasyfikacji bez nadzoru pozbawiony jest tego typu informacji, często również brak jest informacji jakie klasy ma tworzyć dany zbiór. Zadaniem takiego algortmu jest więc wydzielenie i powiązanie ze sobą danych w taki sposób, aby stworzyć klasy.
+
+
+
+
 
 \subsection{Analiza regresji}
+
+
 
 
 
