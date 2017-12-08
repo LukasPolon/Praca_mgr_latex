@@ -106,10 +106,68 @@ Kategoria czwarta określa podmioty nieobiecujące, które posiadają niewielki 
 
 \subsection{Klasyfikacja}
 Klasyfikacja jest jednym z najbardziej podstawowych metod analizy danych statystycznych.
-Jej głównym zadaniem jest przyporządkowanie klas do obiektów z danego zbioru danych. Zagadnienia uczenia maszynowego dzielą klasyfikację na nadzorowaną i klasyfikację bez nadzoru\cite{intro_machine_learning}.
-Algorytmy klasyfikacji nadzorowanej charakteryzują się dostępnością testowego zbioru danych z przypisanymi klasami, który spełnia rolę wzorca dla pozostałych danych.
-Algorytm klasyfikacji bez nadzoru pozbawiony jest tego typu informacji, często również brak jest informacji jakie klasy ma tworzyć dany zbiór. Zadaniem takiego algortmu jest więc wydzielenie i powiązanie ze sobą danych w taki sposób, aby stworzyć klasy.
+Jej głównym zadaniem jest przyporządkowanie klas do obiektów z danego zbioru danych. Zagadnienia uczenia maszynowego dzielą klasyfikację na nadzorowaną i klasyfikację bez nadzoru\cite{intro_machine_learning}.\\
 
+Algorytmy klasyfikacji nadzorowanej charakteryzują się dostępnością testowego zbioru danych z przypisanymi klasami, który spełnia rolę wzorca dla pozostałych danych.
+Algorytm klasyfikacji bez nadzoru pozbawiony jest tego typu informacji, często również brak jest informacji jakie klasy ma tworzyć dany zbiór.
+Zadaniem takiego algortmu jest więc wydzielenie i powiązanie ze sobą danych w taki sposób, aby stworzyć klasy i przyporządkować do nich odpowiednie dane.
+
+\begin{figure}
+\centering
+\includegraphics[width=10cm]{pictures/unsupervised_classification.png}
+\caption{Klasyfikacja nienadzorowana}
+\label{fig:Klasyfikacja nienadzorowana}
+\end{figure}
+
+Istnieje wiele algorytmów kalsyfikacji, których zastosowanie praktyczne uzależnione jest od czynników takich jak szybkość działania, zużycie pamięci, łatwość interpretacji, oraz oczywiście trafność predykcji\cite{decision_tree_classification}.\\
+Wśród nich możemy wyróżnić:
+\begin{itemize}
+\item Naiwny klasyfikator Bayes'a
+\item Drzewa decyzyjne
+\item Algorytm najbliższego sąsiada
+\item Maszyna wektorów nośnych (SVM)
+\item Liniowa analiza dyskryminacyjna
+\end{itemize}
+
+\subsubsection{Naiwny kalsyfikator Bayes'a}
+W 1763 roku Thomas Bayes przestawił w swojej pracy twierdzenie teorii prawdopodobieństwa, które warunkuje prawdopodobieństwa dwóch zdarzeń warunkujących się na wzajem.\\
+Brzmi ono \cite{bayes}:
+\textit{Dla dowolnej hipotezy $h \in H$ oraz zbioru danych D zachodzi równość}
+\begin{ceqn}
+\begin{align}
+Pr(h \mid D) = \frac{Pr(h) Pr(D \mid h)}{Pr(D)}
+\end{align}
+\end{ceqn}
+
+Prawdopodobieństwo \textit{Pr(h)} jest prawdopodobieństwem \textit{a priori} co oznacza, że przy jego określaniu nie były brane pod uwagę dane, które mogły mieć wpływ na jego wartość.
+Poprzez ich uwzględnienie określone zostaje prawdopodobieństwo \textit{a posteriori Pr($h \mid D$)}. Wzór Bayesa wyraża zatem związek między tymi dwoma prawdopodobieństwami,
+natomiast do jego wyrażenia używane są jeszcze prawdodopodbieństwo zaobserwowania danych \textit{Pr(D)}, oraz prawdopodobieńswto zaobserwowania tych danych przy założeniu poprawności hipotezy \textit{$Pr(D \mid h)$}.\\
+
+W klasyfikatorze Bayes'a wybór decyzja o wyborze odpowiedniej hipotezy h ze zbioru hipotez H nie jest podejmowana na podstawie dokładności czy złożoności, lecz prawdopodobieństwa.
+Wybór dokonywany jest na podstawie dwóch sposobów, dzięki którym można uznać hipotezę za najlepszą\cite{bayes}:
+\begin{itemize}
+\item Zasada maksymalnej zgodności
+\item Zasada maksynalnego prawdopodobieństwa \textit{a posteriori}\\
+\end{itemize}
+
+Pierwsza z nich jest nazywana zasadą ML (\textit{Maximum Likelihood}) i mówi, że najlepszą jest hipoteza $h_M_L \in H$, która maksymalizuje warunkowe prawdopodobieństwo danych treningowych
+\begin{ceqn}
+\begin{align}
+h_{ML} = arg \stackrel{h \in H}{max} Pr(T \mid h)
+\end{align}
+\end{ceqn}
+
+Kolejna, nazywana zasadą MAP (\textit{Maximum a posteriori}) wyjaśnia, że należy wybrać taką hipotezę $h_M_A_P \in H$, która posiada maksymalne prawdopodobieństwo \textit{a posteriori}:
+\begin{ceqn}
+\begin{align}
+h_{MAP} = arg \stackrel{h \in H}{max} Pr(h \mid T)
+\end{align}
+\end{ceqn}
+
+\subsubsection Drzewa decyzyjne
+Algorytmy drzew decyzyjnych są jednymi z najszerzej stosowanych metod analizy danych za pomocą uczenia maszynowego.
+Polegają na sekwencyjnym podziale danego zbioru danych na dwa rozłączne podzbiory w taki sposób, aby oba podzbiory były możliwie jednorodne\cite{drzewa_decyzyjne}.
+Działanie drzewa decyzyjnego ilustruje schemat 1.2.
 
 
 
