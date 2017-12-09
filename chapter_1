@@ -192,18 +192,40 @@ Zaletą algorytmów drzew decyzyjnych jest niewątpliwie możliwość bezproblem
 Jedną z metod umożliwiających predykcję wartości na podstawie szeregu innych jest analiza regresji.
 Polega ona na odszukiwaniu i opisie związków między zmiennymi, co prowadzi do stworzenia modelu, czyli równania regresji, które pozwala na analizę struktury zależności i umożliwia prognozowanie.\\
 
-Dobór odpowiedniego modelu regresji jest bardzo istotny ze względu na różnice między nimi. Spośród wielu modeli można wyróżnić:
-\begin{itemize}
-\item Model regresji liniowej
-\end{itemize}
-
-\subsubsection{Regresja liniowa}
 Model regresji liniowej jest to funkcja liniowa zmiennych objaśniających i składnika losowego\cite{statystyka}. Ma postać:
 \begin{ceqn}
 \begin{align}
 Y = \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{2} + ... + \beta_{k}X_{k} + \xi
 \end{align}
 \end{ceqn}
+
+Symbole $\beta_{k}$ odpowiadają współczynnikom regresji cząstkowej, które są najważniejszą częścią równania.
+Informują o zmianie zmiennej \textit{Y} podczas zmiany zmiennej mu odpowiadającej przy założeniu, że pozostałe zmienne nie uległy zmianie.
+Wyraz wolny regresji jest wyrażony symbolem $\beta_{0}$ i zazwyczaj nie podlega interpretacji\cite{statystyka}.
+Składnik losowy oznaczany jest przez $\xi$, a zmienne Y i X nazywane są odpowiednio zmienną objaśnianą (zależną) i zmiennymi objaśniającymi (niezależnymi).\\
+
+Zasadniczą rolę podczas analizy regresji odgrywa estymacja parametrów modelu.
+Ma ona na celu znalezienie wartości ocen parametrów na podstawie danych z próby\cite{statystyka}.
+Tak więc dzięki estymacji można uzyskać takie wartości ocen, które sprawiają iż model regresji jak najlepiej pasuje do danych.
+W przypadku regresji liniowej z jedną zmienną objaśniającą, gdzie równanie regresji przyjmuje postać prostej na wykresie, uzyskujemy jak najlepsze dopasowanie tej prostej do punktów na wykresie rozrzutu danych.\\
+
+Do przeprowadzenia estymacji parametrów modelu regresji liniowej najczęściej stosowana jest Metoda Najmniejszych Kwadratów.
+Pozwala ona na znalezienie ocen parametrów o najmniejszej wartości kwadratów odchyleń pomiędzy rzeczywistymi a teoretycznymi wartościami zmiennej objaśnianej\cite{statystyka}.
+Oznaczanie wartości dopasowanej $\hat{y_{i}}$ za pomocą wzoru regresji liniowej jest przewidywaniem tej zmiennej na podstawie modelu.
+Zmienna ta jest różna od rzeczywistej wartości $y_{i}$, a różnica pomiędzy nimi nazywana jest \textit{resztą}, którą można zdefiniować jako\cite{analiza_danych}:
+\begin{ceqn}
+\begin{align}
+e_{i} = y_{i} - x_{1}_{i}b_{1} - x_{2}_{i}b_{2} - ... - x_{k}_{i}b_{k} = y_{i} - \hat{y_{i}}
+\end{align}
+\end{ceqn}
+
+Dopasowanie modelu jest tym lepsze, im mniejsza jest różnica pomiędzy wartościami dopasowanymi i rzeczywistymi. Na wykresach jest to przedstawione jako wartość bezwzględna odległości punktu od prostej regresji.
+
+
+
+
+
+
 
 
 
