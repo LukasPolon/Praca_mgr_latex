@@ -15,10 +15,91 @@ Dzięki takiej mnogości pakietów i modułów język Python może być wykorzys
 Jednym z przykładów wykorzystania tego języka jest tworzenie aplikacji internetowych za pomocą frameworku Django.
 Łączy on ze sobą różne technologie wykorzystywane przy tworzeniu serwisów internetowych, zapewniając bardzo dobry mechanizm back-endowy oraz wygodne środowisko.\\
 
-Ze względu na 
+Ze względu na wyżej wymienione cechy Python znalazł również zastosowanie w analityce i analizie danych, włączając w to analizę danych statystycznych i giełdowych, a także we wspomaganiu obliczeń matematycznych.
 
 
 \section{Cechy charakterystyczne języka Python}
+Podstawową charakterystyczną cechą języka Python jest fakt, iż nie jest on kompilowany lecz interpretowany, czyli tłumaczony do wykonywalnego kodu maszynowego lub kodu pośredniego.
+Dzięki użyciu interpretera w konsoli systemowej można bezpośrednio wykonywać kod Pythona w czasie rzeczywistym.
+
+
+\begin{lstlisting}
+Python 2.7.12 (default, Nov 20 2017, 18:23:56) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information. 
+>>> from sklearn import datasets
+>>> 
+>>> iris = datasets.load_iris()
+>>> digits = datasets.load_digits()
+>>> digits.data
+array([[  0.,   0.,   5., ...,   0.,   0.,   0.],
+       [  0.,   0.,   0., ...,  10.,   0.,   0.],
+       [  0.,   0.,   0., ...,  16.,   9.,   0.],
+       ..., 
+       [  0.,   0.,   1., ...,   6.,   0.,   0.],
+       [  0.,   0.,   2., ...,  12.,   0.,   0.],
+       [  0.,   0.,  10., ...,  12.,   1.,   0.]])
+>>>
+>>>
+\end{lstlisting}
+
+Pozwala to na bardzo szybkie testowanie niewielkich fragmentów kodu, użycia bibliotek, a także przeprowadzanie testowych obliczeń.
+Jest to również doskonałe narzędzie do sprawdzania i dostosowywania środowiska, w szczególności gdy użyte zostaje symulowane środowisko - program \textit{virtualenv}, 
+który instaluje wybraną wersję interpretera we wskazanym katalogu i umożliwia instalowanie bibliotek niezależnie od tych, które zainstalowane są w systemie.\\
+
+Kolejną wartą uwagi cechą języka Python jest jego składnia. W odróżnieniu od języków takich jak na przykład Java czy C++, w Pythonie zastosowano tak zwane dynamiczne typowanie.
+Oznacza to, że podczas definiowania zmiennych nie określa się ich typu. Jest to możliwe, ponieważ w języku Python każdy element, na przykład funkcja, klasa czy też struktura danych jest obiektem.
+Obiekt ten ma z góry zdefiniowany typ, więc przypisanie jego referencji do konkretnej zmiennej pomaga go w ten sposób określić.
+\begin{lstlisting}
+  Python 2.7.12 (default, Nov 20 2017, 18:23:56) 
+  [GCC 5.4.0 20160609] on linux2
+  Type "help", "copyright", "credits" or "license" for more information.
+  >>> variable_one = 44
+  >>> type(variable_one)
+  <type 'int'>
+  >>> 
+  >>> variable_one = 'text'
+  >>> type(variable_one)
+  <type 'str'>
+  >>> 
+\end{lstlisting}
+
+Jedną z najbardziej użytecznych cech Pythona jest zastosowanie elementów programowania funcyjnego. Elementami takimi są przykładowo wyrażenia \textit{lambda}, oraz \textit{list comprehension} i \textit{dict comprehension}.
+Wyrażenia \textit{lambda} pozwalają na stworzenie i przypisanie do zmiennej ktrótkiej funkcji, która jest w stanie przyjmować argumenty oraz zwracać wartości.
+Znajduje to zastosowanie w przypadkach, które wymagają wielokrotnego wykorzystania danego fragmentu kodu, a użycie ich skraca znacznie ilość wypisanych poleceń.
+Pozwala to uniknąć tworzenia wielu krótkich funkcji lub metod poza obecnie wykorzystywaną przestrzenią, co często wpływa pozytywnie przede wszsytkim na czytelność kodu.
+
+Wyrażenia \textit{list comprehension} oraz \textit{dict comprehension} wykorzystywane są do szybkiego tworzenia odpowiednio list oraz słowników.
+W swojej konstrukcji zawierają pętlę \textit{For}, która iteruje po wskazanej strukturze, na przykład liście, zwracając w każdym kroku jeden jej element.
+Element ten może być sprawdzony warunkiem wbudowanym w strukturę, oraz następnie zmieniony i wbudowany w nową listę lub słownik.
+
+\begin{lstlisting}
+  Python 2.7.12 (default, Nov 20 2017, 18:23:56) 
+  [GCC 5.4.0 20160609] on linux2
+  Type "help", "copyright", "credits" or "license" for more information. 
+  >>> test_lambda = lambda x: x+5
+  >>> test_lambda(10)
+  15
+  >>> 
+  >>> test_list = [1, 2, 3, 4, 5]
+  >>> 
+  >>> list_comprehension = [x+5 for x in test_list]
+  >>> list_comprehension
+  [6, 7, 8, 9, 10]
+  >>> 
+  >>> dict_comprehension = {x: x+1 for x in test_list}
+  >>> dict_comprehension
+  {1: 2, 2: 3, 3: 4, 4: 5, 5: 6}
+  >>> 
+\end{lstlisting}
+
+Naturalnie, natura i składnia języka Python jest o wiele bardziej różnorodna, a przedstawione przykłady odzwierciedlają jedynie namiastkę jego możliwości.
+Należałoby wspomnieć tutaj między innymi o posługiwaniu się choćby wbudowanymi strukturami danych, wykorzystaniu programowania orientowanego obiektowo oraz typowych dla niego elementach.
+Niemniej jednak, biorąc pod uwagę temat niniejszej pracy, którym jest przedstawienie możliwości biblioteki \textit{Scikit-learn}, wyżej wymienione podstawy uzupełnione późniejszymi wyjaśnieniami powinny wystarczyć aby w pełni zrozumieć naturę problemu.
+
+
+
+
 \section{Python w obliczeniach analitycznych}
 \section{Pakiet Scikit-learn}
 \subsection{Cel i przeznaczenie pakietu}

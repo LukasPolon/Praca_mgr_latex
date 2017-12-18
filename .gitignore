@@ -10,5 +10,7 @@
 *.lot
 *.out
 *.odt#
+*.backup
+*.kate-swp
 latex_shortcuts
 
