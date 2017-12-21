@@ -106,9 +106,80 @@ Cechy tego języka zapewniają skoncentrowanie się na bezpośrednim podejściu 
 Jednak największą zaletą tego języka jest dostępność wielu bibliotek z gotowymi rozwiązaniami, które mogą zostać wykorzystane do sprawnej implementacji modeli analitycznych.
 Podstawowymi bibliotekami wspomagającymi przeprowadzanie obliczeń matematycznych są \textit{NumPy} i \textit{SciPy}.\\
 
-Pierwsza z nich 
+Pierwsza z nich dostarcza przede wszystkim obiekty wielowymiarowych list oraz szereg metod i funkcji umożliwiających szybką manipulację, przetwarzanie i stortowanie.
+Zawiera także zestaw metod pozwalających na przeprowadzanie podstawowych działań statystycznych i matematycznych\cite{numpy_ug}. Stosowana jest w wielu innych bibliotekach analitycznych, na przykład w pakiecie \textit{Scikit-learn}.\\
+
+Podstawową różnicą pomiędzy obiektami \textit{array} z pakietu \textit{NumPy}, a wbudowanymi listami języka Python jest fakt, iż podczas tworzenia obiektu ustala się stały rozmiar struktury, 
+a każde zwiększenie tego rozmiaru powoduje powstanie nowego obiektu i usunięcie poprzedniego.
+\begin{lstlisting}
+ >>> python_list = [1, 2, 3, 4]
+ >>> before_append = id(python_list)
+ >>> python_list.append(5)
+ >>> python_list
+ [1, 2, 3, 4, 5]
+ >>> after_append = id(python_list)
+ >>> print(before_append, after_append)
+ (140635439293360, 140635439293360)
+ >>> print(before_append == after_append)
+ True
+ >>> 
+ >>> 
+ >>> import numpy as np
+ >>> np_array = np.zeros(shape=(1, 4))
+ >>> np_array
+ array([[ 0.,  0.,  0.,  0.]])
+ >>> before_resize = id(np_array)
+ >>> np_array = np.resize(np_array, (1, 5))
+ >>> np_array
+ array([[ 0.,  0.,  0.,  0.,  0.]])
+ >>> after_resize = id(np_array)
+ >>> print(before_resize, after_resize)
+ (139910114654128, 139910001813664)
+ >>> print(before_resize == after_resize)
+ False
+ >>> 
+\end{lstlisting}
+
+Powyższa cecha obiektów biblioteki \textit{NumPy} oznacza, że wykonywanie operacji na takich obiektach powinno być bardziej skuteczne pod względem czasu ich przeprowadzania.
+Jednakże wielokrotne przebudowywanie struktury obiektu wiąże się z bardzo dużym zużyciem pamięci, dlatego polecane jest stosowanie konwersji i tworzenie obiektów dopiero w momencie, kiedy dane są skompletowane i gotowe do przetwarzania\cite{numpy_ug}.\\
+
+Biblioteka \textit{SciPy} zbudowana jest na podstawie biblioteki \textit{NumPy} i rozszerza ją o wiele algorytmów analizy danych.
+Elementami składowymi tej biblioteki są między innymi\cite{numpy_ug}:
+\begin{itemize}
+ \item \textbf{cluster} - algorytmy klastrowania
+ \item \textbf{linalg} - algebra liniowa
+ \item \textbf{signal} - przetwarzanie sygnałów
+ \item \textbf{stats} - funkcje i algorytmy statystyczne
+\end{itemize}
+
+Funkcjonalność biblioteki jest bardzo szeroka, dzięki czemu znajduje ona zastosowanie w wielu projektach, a także jest ona częścią składową inych bibliotek analitycznych języka Python.
+Przykładową metodą należącą do biblioteki \textit{stats} jest \textit{linregress}, która umożliwia przeprowadzenie regresji liniowej dla wskazanych danych.
+\begin{lstlisting}
+ >>> from scipy import stats
+ >>> import numpy as np
+ >>>
+ >>> data_x = np.random.random_integers(1, 99, 10)
+ >>> data_y = np.random.random_integers(1, 99, 10)
+ >>> data_x
+ array([72, 45, 69, 52, 93, 14, 80, 14, 13,  5])
+ >>> data_y
+ array([37, 90, 19,  7, 95, 89, 88, 94, 81, 19])
+ >>>
+ >>> slope, intercept, r_value,
+     p_value, std_err = stats.linregress(data_x, data_y)
+ >>> print(slope, intercept, r_value, p_value, std_err)
+ (-0.033350664784966184, 63.424125380672955,
+  -0.029541780200591877, 0.93543372355182242, 0.39896357644710517)
+ >>> 
+\end{lstlisting}
 
 \section{Pakiet Scikit-learn}
+
 \subsection{Cel i przeznaczenie pakietu}
+Biblioteka \textit{Scikit-learn} zawiera zestaw zaawansowanych narzędzi stosujących uczenie maszynowe do analizy danych w języku Python.
+Stworzona jest na podstawie bibliotek takich jak \textit{NumPy} i \textit{Scipy}, a także \textit{Matplotlib} wspomagającej wizualizację danych.
+
+
+
 \subsection{Modele liniowe}
 \subsection{Wybrane modele klasyfikacji i regresji}
