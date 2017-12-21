@@ -1,6 +1,6 @@
 %% ------- ROZDZIAŁ 2 ------- %%
 
-\chapter{Zastosowanie języka programowania Python w analizie rynków finansowych}
+\chapter{Zastosowanie języka programowania Python w obliczeniach analitycznych}
 Python jest językiem programowania wysokiego poziomu, charakteryzujący się przede wszystkim wysoką klarownością i czytelnością kodu.
 Jest to język interpretowany, co w odróżnieniu od języków kompilowanych pozwala na bardzo szybkie tworzenie i testowanie kodu.
 Wadą tego rozwiązania jest niestety spadek wydajności oraz zwiększone zużycie pamięci i procesora, jednak zastosowania praktyczne Pythona zazwyczaj pozwalają na poniesienie tego typu kosztów.
@@ -177,9 +177,51 @@ Przykładową metodą należącą do biblioteki \textit{stats} jest \textit{linr
 
 \subsection{Cel i przeznaczenie pakietu}
 Biblioteka \textit{Scikit-learn} zawiera zestaw zaawansowanych narzędzi stosujących uczenie maszynowe do analizy danych w języku Python.
-Stworzona jest na podstawie bibliotek takich jak \textit{NumPy} i \textit{Scipy}, a także \textit{Matplotlib} wspomagającej wizualizację danych.
+Dystrybuowana jest na licencji BSD, która pozwala na modyfikowanie i rozprowadzanie kodu źródłowego, a nawet na włączanie go do produktów komercyjnych pod warunkiem unieszczenia w dokumentacji odpowiednich adnotacji dotyczących autorów.
+Dzięki temu zaliczana jest do wolnego oprogramowania, które rozwijane jest przez społeczność kontrybutorów.
+Większa część kodu stworzona jest bezpośrednio w języku Python, lecz niektóre elementy takie jak na przykład implementacje SVM oraz modeli liniowych oparte są na bibliotekach języka C++, odpowiednio LibSVM oraz LibLinear\cite{scikit_article}.\\
+
+Podstawowym założeniem twórców biblioteki jest priorytetyzacja utrzymywania jakości i czytelności kodu, ponad implemenację bardzo wielu funkcji\cite{scikit_article}.
+Dodatkowo rozwijana jest wysokeij jakości kompleksowa dokumentacja, co razem stanowi bardzą dobrą bazę do rozwijania całego projektu przez wielu niezależnych deweloperów i wydawania stabilnych wersji produktu.
+Scikit-learn bazuje na trzech bibliotekach języka Python: \textit{NumPy}, \textit{SciPy} i \textit{Matplotlib}, i stanowią one wymagania systemowe, niezbędne do poprawnego działania pakietu.\\
+
+W pakiecie \textit{Scikit-learn} algorytmy podzielone są na algorytmy uczenia z nadzorem oraz algorytmy uczenia bez nadzoru\cite{scikit_doc}.
+Pierwsze z nich operają się o podział danych na uczące i testowe, gdzie dane uczące zawierają przykładowe oczekiwane wartości na podstawie których budowany jest model.
+W zestawie algorytmów uczenia nadzorowanego znaleźć można między innymi\cite{scikit_doc}:
+\begin{itemize}
+ \item Ogólne modele liniowe
+ \item Liniową i kwadratową analizę dyskryminacyjną
+ \item Regresję grzbietową (KRR)
+ \item Maszynę wektorów nośnych (SVM)
+ \item Algorytm k najbliższych sąsiadów
+ \item Proces Gaussa
+ \item Naiwny klasyfikator Bayesa
+ \item Drzewa decyzyjne
+\end{itemize}
+
+Algorytmy uczenia bez nadzoru w pakiecie \textit{Scikit-learn}, dla których dane uczące nie posiadają żadnych wartości odniesienia, możemy natomiast podzielić między innymi na:
+\begin{itemize}
+ \item Klasteryzację
+ \item Estymację kowariancji
+ \item Nieliniową redukcję przestrzenną
+\end{itemize}
+\\
+W niniejszej pracy zastoswane zostały algorytmy uczenia z nadzorem, należące do grup: \textit{Ogólne modele liniowe}, \textcolor{red}{Uzupełnić!}
+
+\subsection{Ogólne modele liniowe}
+W pakiecie \textit{Scikit-learn} przedstawione zostały algorytmy regresji, w których oczekiwane wartości docelowe są liniową kombinacją wartości wejściowych.
+Podstawę stanowi równanie regresji:
+\begin{ceqn}
+\begin{align}
+\hat{y} = \omega_{0} + \omega_{1}X_{1} + \omega_{2}X_{2} + ... + \omega_{p}X_{k}
+\end{align}
+\end{ceqn}
+
+Wektor $\omega = (\omega_{1}, ..., \omega_{p})$ jest utożsamiany z parametrem \textit{coef\_}, a wyraz wolny $\omega_{0}$ z parametrem \textit{intercept\_} \cite{scikit_doc}.
+
+\subsubsection{Regresja liniowa}
+Regresja liniowa w pakiecie \textit{Sciki-learn} reprezentowana jest przez obiekt \textbf{LinearRegression}.
 
 
 
-\subsection{Modele liniowe}
 \subsection{Wybrane modele klasyfikacji i regresji}
