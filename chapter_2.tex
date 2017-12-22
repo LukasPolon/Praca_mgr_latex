@@ -220,7 +220,26 @@ Podstawę stanowi równanie regresji:
 Wektor $\omega = (\omega_{1}, ..., \omega_{p})$ jest utożsamiany z parametrem \textit{coef\_}, a wyraz wolny $\omega_{0}$ z parametrem \textit{intercept\_} \cite{scikit_doc}.
 
 \subsubsection{Regresja liniowa}
-Regresja liniowa w pakiecie \textit{Sciki-learn} reprezentowana jest przez obiekt \textbf{LinearRegression}.
+Regresja liniowa w pakiecie \textit{Sciki-learn} dostępna jest poprzez obiekt \textbf{LinearRegression}.
+Parametry, jakie przyjmuje ten obiekt w momencie inicjalizacji to\cite{scikit_doc}:
+\begin{itemize}
+ \item \textit{fit\_intercept}: boolean, optional, default True
+ \item \textit{normalize}: boolean, optional, default False
+ \item \textit{copy\_X}: boolean, optional, default True
+ \item \textit{n\_jobs}: int, optional, default 1
+\end{itemize}
+
+Obiekt udostępnia następujące metody:
+\begin{itemize}
+ \item \textit{fit}: dopasowanie modelu liniowego
+ \item \textit{get\_params}: pobranie parametrów estymacji
+ \item \textit{predict}: predykcja na podstawie modelu liniowego
+ \item \textit{score}: współczynnik determinacji $R^2$
+ \item \textit{set\_params}: ustawienie parametrów estymacji
+\end{itemize}
+
+
+
 
 
 
