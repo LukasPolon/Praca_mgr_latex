@@ -219,7 +219,6 @@ Podstawę stanowi równanie regresji:
 
 Wektor $\omega = (\omega_{1}, ..., \omega_{p})$ jest utożsamiany z parametrem \textit{coef\_}, a wyraz wolny $\omega_{0}$ z parametrem \textit{intercept\_} \cite{scikit_doc}.
 
-\subsubsection{Regresja liniowa}
 Regresja liniowa w pakiecie \textit{Sciki-learn} dostępna jest poprzez obiekt \textbf{LinearRegression}.
 Parametry, jakie przyjmuje ten obiekt w momencie inicjalizacji to\cite{scikit_doc}:
 \begin{itemize}
@@ -228,6 +227,28 @@ Parametry, jakie przyjmuje ten obiekt w momencie inicjalizacji to\cite{scikit_do
  \item \textit{copy\_X}: boolean, optional, default True
  \item \textit{n\_jobs}: int, optional, default 1
 \end{itemize}
+
+Parametr \textit{fit\_intercept} przyjmuje wartości typu boolean, a jego domyślna wartość wynosi \textit{True}.
+W takim wypadku przed procesem dopasowania modelu obliczany jest punkt przecięcia z osią \textit{y} dla modelu.
+Jeśli przed procesem dopasowywania modelu dokonano normalizacji danych, parametr może zostać ustawiony wartością \textit{False}.\\
+
+Parametr \textit{normalize} jest flagą uwzględniającą lub pomijającą wstępną normalizację danych.
+Przyjmuje wartości typu boolean i domyślnie jest ustawony na \textit{False} i jest ignorowany, gdy parametr \textit{fit\_intercept} jest ustawiony wartością \textit{False}.
+Jeśli przed dokonaniem dopasowania modelu nie została przeprowadzona normalizacja danych, ustawienie tego parametru na \textit{True} spowoduje ich przetworzenie.\\
+
+Parametr \textit{copy\_X} jest odpowiedzialny za ustawienie flagi kopiowania, bądź nadpisywania wartości X. Domyślnie ustawiony jest na wartość \textit{True}, więc w tym przypadku podane dane X są kopiowane.\\
+
+Parametr \textit{n\_jobs} określa ilość procesorów, które będą użyte do przetwarzania danych. Przyjmuje wartości typu integer, a domyślnie ustawiony jest wartością 1.
+Jeśli podana zostanie wartość -1, wykorzystane zostaną wszystkie dostępne procesory. Znajduje on praktyczne zastosowanie przy przetwarzaniu dużych zbiorów danych, skracając czas wykonania obliczeń.\\
+
+\begin{lstlisting}
+ >>> from sklearn.linear_model import LinearRegression
+ >>> LinearRegression()
+ LinearRegression(copy_X=True, fit_intercept=True, n_jobs=1,
+                  normalize=False)
+ >>>
+\end{lstlisting}\\
+
 
 Obiekt udostępnia następujące metody:
 \begin{itemize}
@@ -238,9 +259,65 @@ Obiekt udostępnia następujące metody:
  \item \textit{set\_params}: ustawienie parametrów estymacji
 \end{itemize}
 
+Metoda \textit{fit} jest odpowiedzialna za dopasowanie modelu dla podanych danych. Jako argumenty przyjmuje dane testowe X, które powinny być strukturą definiowaną typem \textit{numpy.ndarray}. Przykładowo:
+\begin{lstlisting}
+ >>> X = np.asarray([x for x in range(5)])
+ >>> X
+ array([0, 1, 2, 3, 4])
+ >>> X.reshape(-1, 1)
+ array([[0],
+        [1],
+        [2],
+        [3],
+        [4]])
+ >>>
+\end{lstlisting}
+Wartości y, jako kolejny argument przyjmowany przez funkcję, powinny być zgodne typem z wartościami X, lecz ich postać powinna być macierzą jednowymiarową.
+Ważną informacją jest fakt, iż struktura X oraz struktura y powinny mieć dokładnie ten sam rozmiar. W innym przypadku niemożliwe jest dokonanie dopasowania, a metoda zwraca błąd \textit{ValueError}.
+W przypadku danych giełdowych wartości X utożsamiane są przez przekształcone wartości dat kolejnych próbek danych testowych, natomiast wartości y to odpowiadające im ceny akcji lub wielkości wolumenu.\\
+
+Kolejną metodą klasy \textit{LinearRegression} jest \textit{predict}. Umożliwia ona dokonanie obliczeń predykcji dla podanych danych testowych X, na podstawie dopasowanego przy pomocy metody \textit{fit} modelu.
+Przyjmowane dane testowe powinny być zgodne zarówno typem, jak i formatem struktury z danymi testowymi X użytymi do przeprowadzenia dopasowania modelu metodą \textit{fit}.
+
+\begin{lstlisting}
+ >>> import random
+ >>> import numpy as np
+ >>> from sklearn.linear_model import LinearRegression
+ >>>
+ >>> X = np.asarray(range(1, 10))
+ >>> X.reshape(-1, 1)
+ >>> y = np.asarray(sorted([random.uniform(1.0, 2.0)
+                            for x in range(10)]))
+ >>> print(y)
+ array([ 1.03622622,  1.08102786,  1.15758493,  1.30854005,
+         1.43797429,  1.47473032,  1.5770967 ,  1.64707456,
+         1.7256157 ,  1.8449893 ])
+ >>> X_test = np.asarray(11, 15)
+ >>> X_test = X_test.reshape(-1, 1)
+ >>>
+ >>> linear = LinearRegression()
+ >>> linear.fit(X, y)
+ LinearRegression(copy_X=True, fit_intercept=True, n_jobs=1,
+                  normalize=False)
+ >>> linear.predict(X_test)
+ array([ 2.02318035,  2.11457948,  2.20597861,  2.29737775])
+ >>> linear.predict(X)
+ array([ 1.0177899 ,  1.10918903,  1.20058816,  1.2919873 ,
+         1.38338643,  1.47478556,  1.56618469,  1.65758382,
+         1.74898295,  1.84038209])
+ >>>
+\end{lstlisting}
 
 
+\subsection{Nieliniowe modele regresji}
+W pakiecie \textit{Scikit-learn} regresja grzbietowa reprezentowana jest przez klasę \textit{KernelRidge}.
+Jest ona w istocie połączeniem algorytmu regresji grzbietowej z tak zwanymi funkcjami jądra (kernel functions).
+Najważniejszymi parametrami przyjmowanymi przez tą klasę są:
+\begin{itemize}
+ \item \textit{alpha}: {float, array}
+ \item \textit{kernel}: string, default \textit{linear}
+ \item \textit{gamma}: float, default None
+\end{itemize}
 
+Parametr \textit{alpha}
 
-
-\subsection{Wybrane modele klasyfikacji i regresji}
