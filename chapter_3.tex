@@ -220,8 +220,37 @@ Daty konwertowane są na wartości typu \textit{Integer} przedstawiające odleg�
 Kolejnym krokiem jest użycie obiektu klasy \textit{sklearn.preprocessing.StandardScaler} w celu przeprowadzenia normalizacji danych.
 Obiekt ten udostępnia metody \textit{fit\_transform()} oraz \textit{inverse\_transform()}, które pozwalają na odpowiednio: przeprowadzenie normalizacji danych oraz powrót do oryginalnych wartości.\\
 
-Tak przygotowane dane są następnie dzielone na zbiory uczące i testowe za pomocą osobnej metody.
+Tak przygotowane dane są następnie dzielone na zbiory uczące i testowe za pomocą osobnej metody.\\
 
+Obiekt klasy \textit{sklearn.linear\_model.LinearRegression} został użyty do przeprowadzenia regresji liniowej:
+\begin{lstlisting}
+ linear_reg = LinearRegression(fit_intercept=False)
+ linear_reg.fit(sort_dates_train, sort_values_train)
+ sort_pred = linear_reg.predict(sort_dates)
+\end{lstlisting}
+Pierwszym krokiem jest stworzenie obiektu \textit{linear\_reg}, podając jako argument \textit{fit\_intercept=False}.
+Tak przygotowany obiekt udostępnia metodę \textit{fit()}, której argumentami są zbiory danych uczących, odpowiednio dat i cen akcji.
+Metoda ta przygotowuje model do predykcji, którą wykonuje się za pomocą kolejnej metody \textit{predict()}, jako argumenty podając zbiór wszstkich dat, zarówno testowych jak i uczących.
+Pozwala to na stworzenie prostej regresji dla całego zbioru danych.\\
+
+Klasa \textit{sklearn.kernel\_ridge.KernelRidge} pozwala na przeprowadzenie analizy regresji grzbietowej która, zaliczając się do regresji nieliniowych, została wzbogacona o obiekt klasy \textit{sklearn.model\_selection.GridSearchCV}:
+\begin{lstlisting}
+ krr = GridSearchCV(
+         KernelRidge(kernel='rbf'),
+                     param_grid={"alpha": [1e0, 0.1, 1e-2, 1e-3],
+                                 "gamma": np.logspace(-2, 2, 5)})
+
+ krr.fit(sort_dates_train, sort_values_train)
+ sort_pred = krr.predict(sort_dates)
+\end{lstlisting}
+
+Obiekt \textit{KernelRidge} przyjmuje parametry \textit{alpha} i \textit{gamma}, których dopasowanie jest niezmierne istotne przy przeprowadzaniu poprawnej analizy.
+Znalezienie poprawnego dopasowania parametrów jest znacznie uproszczone w przypadku wykorzystania obiektu \textit{GridSearchCV}, 
+który dla podanego obiektu regresji i parametrów określonych w \textit{param\_grid} automatycznie dopasowuje najlepsze parametry.
+Tworzy on iloczyn kartezjański wszystkich podanych argumentów, i podczas działania kolejnego kroku, czyli metody \textit{fit()} wybiera taki zbiór, który jest najlepiej dopasowany.\\
+
+W przypadku pozostałych metod regresji, czyli Regresji Wektorów Nośnych i Regresji Procesu Gaussa zastosowano ten sam mechanizm dobierania parametrów obiektu.
+Pierwsza z nich udostępniona jest przez obiekt klasy \textit{sklearn.svm.SVR}, a druga przez obiekt klasy \textit{sklearn.gaussian\_process.GaussianProcessRegressor}.
 
 
 \section{Opis funkcjonalności aplikacji}
