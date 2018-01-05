@@ -254,8 +254,64 @@ Pierwsza z nich udostępniona jest przez obiekt klasy \textit{sklearn.svm.SVR}, 
 
 
 \section{Opis funkcjonalności aplikacji}
+Aplikacja została napisana w języku programowania Python w środowisku Windows 10 Home.
+Do poprawnego uruchomienia wymaga zainstalowanego interpretera języka Python w wersji 2.7, oraz zainstalowanych bibliotek zewnętrznych, z których najważniejsze to:
+\begin{itemize}:
+ \item Matplotlib, Pandas, Numpy i SciPy
+ \item Scikit-learn
+ \item Kivy
+ \item Pandas_datareader
+ \item Configparser
+ \item SqlAlchemy
+\end{itemize}
+
+Wszystkie biblioteki użyte w pracy dostępne są na licencjach open-source i są gotowe do pobrania poprzez interfejs \textit{PyPa - Python Package Index}.\\
+
+Aplikacja podzielona jest na trzy okna:
+\begin{itemize}
+ \item Okno instrukcji
+ \item Okno opcji
+ \item Okno analizy regresji
+\end{itemize}
+
+Po uruchomieniu aplikacji użytkownikowi jako pierwsze przedstawiane jest okno instrukcji, które zawiera schemat kroków potrzebnych do poprawnego przeprowadzenia analizy.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=150mm]{pictures/app_info_screen.png}
+\caption{Aplikacja: okno instrukcji}
+\label{fig:Okno instrukcji}
+\end{figure}
+
+Z lewej strony dostępny jest pasek menu, który zawiera przyciski: \textit{Info}, \textit{Options}, \textit{Regression analysis} oraz \textit{Exit}.
+Każdy z nich pozwala na wyświetlenie innego okna aplikacji, z wyjątkiem przycisku \textit{Exit} który wywołuje okno z zapytaniem o zakończenie pracy programu.
 
 \subsection{Okno opcji}
+W oknie opcji użytkownik może zmienić lub ustawić parametry, które będą używane w późniejszej analizie regresji.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=150mm]{pictures/app_options_screen.png}
+\caption{Aplikacja: okno instrukcji}
+\label{fig:Okno instrukcji}
+\end{figure}
+
+Parametry możliwe do zmiany to:
+\begin{itemize}
+ \item \textit{Temporary files directory}: ścieżka do folderu, do którego mają być zapisywane wyniki
+ \item \textit{Company}: nazwa firmy, dla której mają być pobrane dane
+ \item \textit{Date from}: data od której mają być pobrane dane, w formacie yyyy-mm-dd
+ \item \textit{Date to}: data do której mają być pobierane dane, w formacie yyyy-mm-dd
+ \item \textit{Regression method}: lista typu dropdown z możliwością wyboru metody regresji
+ \item \textit{Data split rate}: wartość procentowa ilości danych uczących względem danych testowych
+ \item \textit{Data type for regression}: lista typu dropdown umożliwiająca wybór typu danych do analizy
+\end{itemize}
+
+Do zapisania konfiguracji służy przycisk \textit{Save} który, ze względu na walidację każdego pola lub listy, po wciśnięciu poinformuje użytkownika o powodzeniu lub niepowodzeniu operacji.
+W przypadku niepowodzenia użytkownikowi zostaje wskazane pole, które zostało źle wypełnione.\\
+
+Lista firm, dla których jest możliwość pobrania danych znajduje się w zablokowanym polu tekstowym z prawej strony okna.
+Jako, iż istnieje możliwość kopiowania tekstu z tego pola, aby wypełnić paramter \textit{Company} należy skopiować dokładną nazwę firmy i wkleić ją we właściwe miejsce.
+Przycisk \textit{Next} pozwala natomiast na wyświetlenie kolejnej części listy firm, która jest posortowana alfabetycznie.
+
 
 \subsection{Okno analizy regresji}
 
