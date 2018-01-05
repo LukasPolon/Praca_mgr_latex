@@ -256,11 +256,11 @@ Pierwsza z nich udostępniona jest przez obiekt klasy \textit{sklearn.svm.SVR}, 
 \section{Opis funkcjonalności aplikacji}
 Aplikacja została napisana w języku programowania Python w środowisku Windows 10 Home.
 Do poprawnego uruchomienia wymaga zainstalowanego interpretera języka Python w wersji 2.7, oraz zainstalowanych bibliotek zewnętrznych, z których najważniejsze to:
-\begin{itemize}:
+\begin{itemize}
  \item Matplotlib, Pandas, Numpy i SciPy
  \item Scikit-learn
  \item Kivy
- \item Pandas_datareader
+ \item Pandas\_datareader
  \item Configparser
  \item SqlAlchemy
 \end{itemize}
@@ -290,8 +290,8 @@ W oknie opcji użytkownik może zmienić lub ustawić parametry, które będą u
 \begin{figure}[h!]
 \centering
 \includegraphics[width=150mm]{pictures/app_options_screen.png}
-\caption{Aplikacja: okno instrukcji}
-\label{fig:Okno instrukcji}
+\caption{Aplikacja: okno opcji}
+\label{fig:Okno opcji}
 \end{figure}
 
 Parametry możliwe do zmiany to:
@@ -312,7 +312,36 @@ Lista firm, dla których jest możliwość pobrania danych znajduje się w zablo
 Jako, iż istnieje możliwość kopiowania tekstu z tego pola, aby wypełnić paramter \textit{Company} należy skopiować dokładną nazwę firmy i wkleić ją we właściwe miejsce.
 Przycisk \textit{Next} pozwala natomiast na wyświetlenie kolejnej części listy firm, która jest posortowana alfabetycznie.
 
-
 \subsection{Okno analizy regresji}
+W oknie analizy regresji użytkownik może przeprowadzić operacje: pobrania danch giełdowych i przeprowadzenia analizy, zgodnie z parametrami ustawionymi w oknie opcji.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=150mm]{pictures/app_reg_screen_data_loaded.png}
+\caption{Aplikacja: okno analizy regresji (pobrane dane giełdowe)}
+\label{fig:Okno analizy regresji}
+\end{figure}
+
+Z prawej strony okna znajduje się pasek menu z przyciskami: \textit{Load stock data}, \textit{Regression analyze} oraz \textit{Save}.
+Z lewej strony znajduje się nastomiast zablokowane pole tekstowe, w którym pojawiają się wyniki i informacje.
+W centralnej części obecne są przyciski, które są odpowiedzialne za wyświetlanie odpowiednich wykresów:
+\begin{itemize}
+ \item \textit{Open/Close price data diagram}
+ \item \textit{High/Low price data diagram}
+ \item \textit{Volume data diagram}
+ \item \textit{Regression diagram}
+ \item \textit{Regression train data diagram}
+\end{itemize}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=150mm]{pictures/app_reg_screen_plot.png}
+\caption{Aplikacja: Wykres rezultatu analizy regresji}
+\label{fig:Wykres rezultatu analizy regresji}
+\end{figure}
+
+Pierwsze trzy wykresy przedstawiają niemodyfikowane dane giełdowe pobrane za pomocą przycisku \textit{Load stock data} i tylko po jego wciśnięciu będą dostępne.
+Ostatnie dwa wykresy udostępnione zostają po przeprowadzeniu analizy regresji i przedstawiają odpowiednio: rezultat analizy regresji dla całości danych oraz rezultat zawężony jedynie do danych testowych.
 
 \section{diagramy UML}
+
