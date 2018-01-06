@@ -2,4 +2,50 @@
 
 \chapter{Testy aplikacji}
 
-\section{Cel przeprowadzanych analiz}
+\section{Cel przeprowadzonych analiz}
+
+Wykorzystując napisaną na potrzeby niniejszej pracy aplikację przeprowadzono testy, które zmierzają do porównania wybranych modeli regresji dostępnych w pakiecte \textit{Scikit-learn}.\\
+
+Testy przeprowadzone zostały na dwóch zbiorach danych: cen giełdowych firmy Microsoft w zakresie od 2017-01-01 do 2017-10-30, oraz cen giełdowych firmy Intel w zakresie od 2017-01-01 do 2017-04-30.
+W dlaszej części zbiory te będą nazywane odpowiednio: zbiór szeroki i zbiór wąski.
+Dane wykorzystane do testów były cenami otwarcia.\\
+
+Przeprowadzono osobne testy dla każdej z trzech wartości procentowych ilości danych uczących w stosunku do ilości danych testowych: 20\%, 50\% oraz 80\%.\\
+
+Wybrane modele regresji to:
+\begin{itemize}
+ \item Regresja Liniowa
+ \item Regresja Grzbietowa (KRR)
+ \item Regresja Wektorów Nośnych (SVR)
+ \item Regresja Procesu Gaussa (GPR)
+\end{itemize}
+
+Reasumując, dla każdej z metod regresji wykonano sześć testów.\\
+
+Celem testów jest porównanie modeli regresji dostępnych w pakiecie \textit{Scikit-learn} i wyciągnięcie wniosków dotyczących:
+\begin{itemize}
+ \item dokładności predyckji modeli w zależności od ilości danych uczących oraz całkowitej ilości danych
+ \item zdolności modeli do reprezentacji trendu
+ \item wpływu zmiany ilości danych uczących na dopasowanie modeli
+ \item wpływu całkowitej ilości danych na dopasowanie modeli
+\end{itemize}
+
+\section{Testy zbioru danych: Microsoft}
+
+\subsection{Informacje ogólne}
+\subsection{Regresja liniowa}
+\subsection{Regresja Grzbietowa}
+\subsection{Regresja Wektoróœ Nośnych}
+\subsection{Regresja Procesu Gaussa}
+\subsection{Podsumowanie}
+
+\section{Testy zbioru danych: Intel}
+
+\subsection{Informacje ogólne}
+\subsection{Regresja liniowa}
+\subsection{Regresja Grzbietowa}
+\subsection{Regresja Wektoróœ Nośnych}
+\subsection{Regresja Procesu Gaussa}
+\subsection{Podsumowanie}
+
+\section{Wnioski}
