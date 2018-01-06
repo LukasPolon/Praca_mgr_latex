@@ -348,10 +348,38 @@ Ze względu na dużą ilość klas, w szczególności należących do graficzneg
 Wyróżnić można natomiast trzy główne funkcje aplikacji, które przedstawione na diagramie UML mogą posłużyć jako dobre odzwierciedlenie działania aplikacji.
 
 \subsection{Zapis parametrów w oknie opcji}
-Pierwszą główną funkcją aplikacji jest zapis wybranych przez użytkownika parametrów do pliku konfiguracyjnego.
+Pierwszą główną funkcją aplikacji jest zapis wybranych przez użytkownika parametrów do pliku konfiguracyjnego.\\
 \begin{figure}[h!]
 \centering
-\includegraphics[width=150mm]{pictures/uml_save.png}
+\includegraphics[width=150mm,heigh=100mm]{pictures/uml_save.png}
 \caption{Diagram UML: zapis parametrów w oknie opcji}
 \label{fig:Diagram UML: zapis parametrów w oknie opcji}
 \end{figure}
+
+Podstawową klasą jest \textit{OptionsScreenLayout}, która dziedziczy po klasie \textit{FloatLayout} należącej do biblioteki \textit{Kivy}, 
+a także implementuje klasy odpowiedzialne za zarządzenie konfiguracją (\textit{ConfigManagement}) oraz za przycisk zapisu konfiguracji (\textit{SaveButton}.)\\
+
+Pozostałe klasy, w zależności od przeznaczenia, dziedziczą po pochodzących z pakietu \textit{Kivy} klasach \textit{TextInput} praz \textit{Button}.
+Dwie klasy odpowiedzialne za implementację list rozwijanych dodatkowo implementują klasę \textit{DropDown}.\\
+
+\subsection{Pobieranie danych giełdowych}
+Kolejną funkcją aplikacji przedstawioną na schemacie UML jest mechanizm pobierania danych giełdowych.\\
+\begin{figure}[h!]
+\centering
+\includegraphics[width=150mm,heigh=100mm]{pictures/uml_load_data.png}
+\caption{Diagram UML: pobierane danych giełdowych}
+\label{fig:Diagram UML: pobieranie danych giełdowych}
+\end{figure}
+
+Przycisk odpowiedzialny za akcję, \textit{LoadDataButton}, dziedziczy po klasie \textit{Button} biblioteki \textit{Kivy}, oraz implementuje klasy zarządzania konfiguracją oraz pobierania danch (\textit{DataDownload}).
+Klasa odpowiadająca za pobieranie danych implementuje natomiast bazodanową klasę \textit{Operations}, która wraz z \textit{CompanyInfo} oraz \textit{DbDriver} umożliwiają dostęp do bazy danych nazw i znaczników giełdowych firm.\\
+
+\subsection{Analiza regresji}
+Ostatnią przedstawioną funkcją aplikacji jest przeprowadzanie analizy regresji.\\
+\begin{figure}[h!]
+\centering
+\includegraphics[width=150mm,heigh=100mm]{pictures/uml_regression.png}
+\caption{Diagram UML: analiza regresji}
+\label{fig:Diagram UML: analiza regresji}
+\end{figure}
+
