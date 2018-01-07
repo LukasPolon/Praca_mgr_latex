@@ -4,15 +4,15 @@
 
 \section{Cel przeprowadzonych analiz}
 
-Wykorzystując napisaną na potrzeby niniejszej pracy aplikację przeprowadzono testy, które zmierzają do porównania wybranych modeli regresji dostępnych w pakiecte \textit{Scikit-learn}.\\
+Wykorzystując napisaną na potrzeby niniejszej pracy aplikację przeprowadzono testy, które zmierzają do porównania wybranych modeli regresji dostępnych w pakiecie \textit{Scikit-learn}.\\
 
 Testy przeprowadzone zostały na dwóch zbiorach danych: cen giełdowych firmy Microsoft w zakresie od 2017-01-01 do 2017-10-30, oraz cen giełdowych firmy Intel w zakresie od 2017-01-01 do 2017-04-30.
-W dlaszej części zbiory te będą nazywane odpowiednio: zbiór szeroki i zbiór wąski.
+W dalszej części zbiory te będą nazywane odpowiednio: zbiór szeroki i zbiór wąski.
 Dane wykorzystane do testów były cenami otwarcia.\\
 
-Każdy przeprowadzony test uwzględnia wyliczenie dwóch wartości: średniego błędu kwadratowego oraz wyniku predycji.\\
+Każdy przeprowadzony test uwzględnia wyliczenie dwóch wartości: średniego błędu kwadratowego oraz wyniku predykcji.\\
 
-Średni błąd kwadratowy liczony jest poprzez wykorzystanie funknji \textit{sklearn.metrics.mean\_squared\_error} z pakietu \textit{Scikit-learn}, a jego wartość w wypadku predykcji idealnej wynosi zero.
+Średni błąd kwadratowy liczony jest poprzez wykorzystanie funkcji \textit{sklearn.metrics.mean\_squared\_error} z pakietu \textit{Scikit-learn}, a jego wartość w wypadku predykcji idealnej wynosi zero.
 Liczony jest na podstawie wartości predykcji dla danych testowych.
 Wynik predykcji jest natomiast liczony poprzez wywołanie metody \textit{score()} obieku danego modelu regresji, a jego wartość zmierza do osiągnięcia 1.0 w przypadku idealnym.
 Liczony jest na podstawie wyników predykcji zarówno dla zbioru uczącego jak i testowego.\\
@@ -71,7 +71,7 @@ Wykres regresji liniowej dla podanego zbioru danych, przy proporcji 20\% danych 
 \label{fig:microsoft_linear_20}
 \end{figure}
 
-Widoczny jest tu trend wzrostowy, który określony na podstawie danych uczących, kontunuowany jest także dla danych testowych.
+Widoczny jest tu trend wzrostowy, który określony na podstawie danych uczących, kontynuowany jest także dla danych testowych.
 Należy jednak zauważyć, że podany zbiór danych nie zawiera gwałtownych wzrostów i spadków cen w szczególności w części testowej, dzięki czemu regresja z powodzeniem przewiduje jego kontynuację.\\
 
 Na rysunku \ref{fig:microsoft_linear_50} przedstawiono wykres regresji liniowej dla 50\% proporcji danych uczących.
@@ -177,7 +177,7 @@ Rysunki \ref{fig:microsoft_gpr_20}, \ref{fig:microsoft_gpr_50}, \ref{fig:microso
 \label{fig:microsoft_gpr_20}
 \end{figure}
 
-Na powyższym wykresie możemy zaobserwować zachowanie się krzywej regresji, któ©e jest bardzo podobne do tej z rysunku \ref{fig:microsoft_svr_20}.
+Na powyższym wykresie możemy zaobserwować zachowanie się krzywej regresji, które jest bardzo podobne do tej z rysunku \ref{fig:microsoft_svr_20}.
 Spowodowane to może być zbyt małą ilością użytych danych uczących, które charakteryzują się niewielką zmiennością.\\
 
 \begin{figure}[h!]
@@ -188,7 +188,7 @@ Spowodowane to może być zbyt małą ilością użytych danych uczących, któr
 \end{figure}
 
 Wykres na rysunku \ref{fig:microsoft_gpr_50} powtarza tendencję z wykresu na rysunku \ref{fig:microsoft_gpr_20}.
-Trend wzrostowy jest poprawnie predykcjonowany jedynie dla początkowych wartości danych testowych, a następnie występuje odchylenie krzywej regresji w dół.\\
+Trend wzrostowy jest poprawnie przewidywany jedynie dla początkowych wartości danych testowych, a następnie występuje odchylenie krzywej regresji w dół.\\
 
 \begin{figure}[h!]
 \centering
@@ -281,7 +281,7 @@ Z powyższego wykresu wynika, iż poprzez predykcję poprawnie zidentyfikowano t
 \end{figure}
 
 W porównaniu do wykresu na rysunku \ref{fig:intel_linear_50}, na powyższym wykresie zaobserwować można prostą regresji identyfikującą trend spadkowy, lecz o mniejszym nachyleniu niż poprzednio.
-Może być to spowodowane lepszym dopasowaniem modelu, lub też zwiekszoną liczbą danych uczących.\\
+Może być to spowodowane lepszym dopasowaniem modelu, lub też zwiększoną liczbą danych uczących.\\
 
 \begin{figure}[h!]
 \centering
@@ -324,7 +324,7 @@ Może być to ponownie spowodowane nietrafnie dobranym zakresem danych uczących
 \end{figure}
 
 Spośród trzech przedstawionych analiz regresji grzbietowej, wykres na rysunku \ref{fig:intel_krr_80} zdecydowanie przedstawia krzywą regresji najlepiej przedstawiającą trend.
-Należy jednak zauważyć, iż fragment przedstawiający dane testowe jest relatywnie niewielki, a przeidywane wartości nie pokrywają się w żdnym punkcie z wartościami testowymi.\\
+Należy jednak zauważyć, iż fragment przedstawiający dane testowe jest relatywnie niewielki, a przewidywane wartości nie pokrywają się w żadnym punkcie z wartościami testowymi.\\
 
 \subsection{Regresja Wektorów Nośnych}
 
@@ -361,7 +361,7 @@ Podobnie jak w przypadku wykresu \ref{fig:intel_krr_80} regresji grzbietowej, ta
 
 \subsection{Regresja Procesu Gaussa}
 
-Na rysunkach \ref{fig:intel_gpr_20}, \ref{fig:intel_gpr_50} i \ref{fig:intel_gpr_80} przedstawiono wykresy analizy regresji procesu Gaussa dla następujących ilośći danych testowych: 20\%, 50\% i 80\%.\\
+Na rysunkach \ref{fig:intel_gpr_20}, \ref{fig:intel_gpr_50} i \ref{fig:intel_gpr_80} przedstawiono wykresy analizy regresji procesu Gaussa dla następujących ilości danych testowych: 20\%, 50\% i 80\%.\\
 
 \begin{figure}[h!]
 \centering
@@ -425,7 +425,7 @@ Natomiast niedokładna predykcja trendu widoczna jest na wykresach regresji grzb
 
 \begin{enumerate}
  \item Dokładność predykcji modelu regresji liniowej zmienia się nieznacznie w zależności od zmiany proporcji ilości danych uczących względem danych testowych.
- \item Przedstawione modele regresji nieliniowych wykazują dużą wrażliwość na wysoką zmienność danych poddawanych analizie, przez co w celu osiągnięcia bardziej dokłądnych wyników predycji niezbędne jest znalezienie właściwych zakresów parametrów podawanych jako argumenty do obiektów tych regresji.
+ \item Przedstawione modele regresji nieliniowych wykazują dużą wrażliwość na wysoką zmienność danych poddawanych analizie, przez co w celu osiągnięcia bardziej dokładnych wyników predykcji niezbędne jest znalezienie właściwych zakresów parametrów podawanych jako argumenty do obiektów tych regresji.
  \item Wartości średniego kwadratu błędów oraz wyników predykcji (dopasowania modelu) wykazują zależność od całkowitej ilości analizowanych danych. Wraz ze wzrostem ich ilości zwiększają się wartości błędów, a wyniki predykcji ulegają polepszeniu.
  \item Dobre właściwości określania trendu dla obydwu testowanych zakresów danych wykazały: regresja liniowa, wektorów nośnych (przy 80\% danych uczących) oraz grzbietowa (przy 80\% danych uczących).
  \item Regresja procesu Gaussa w przypadku dużego zbioru danych nie wykazała dobrych zdolności predykcyjnych, natomiast w przypadku małego zbioru można ją uznać za najlepszą metodę regresji dla podanych warunków.

@@ -1410,7 +1410,8 @@
 \csname MgrWMS@SetMathSpecial@\MgrWMS@MathSpecial\endcsname
 %----- Polecenia dla emblematow uczelni i wydzialu  -----%
 \ifMgrWMS@pdftex
-	\def\MgrWMS@LogoAGH{pictures/logo2.pdf}
+	\def\MgrWMS@LogoAGH{pictures/logo2.eps}
+	%\def\MgrWMS@LogoAGH{pictures/logo2.pdf}
 	% \def\MgrWMS@LogoWMS{pictures/logoWMS.png}
 \else 
 	\def\MgrWMS@LogoAGH{pictures/logo2.eps}

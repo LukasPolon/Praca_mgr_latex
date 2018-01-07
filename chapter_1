@@ -4,36 +4,37 @@
 \section{Rynki finansowe}
 Giełda jest zbiorem instytucji finansowych, w których odbywa się wymiana papierów wartościowych pomiędzy kupującymi i sprzedającymi\cite{stock_market}.
 Powinna ona koncentrować popyt i podaż na papiery wartościowe, co prowadzi do kształtowania się powszechnego kursu.
-Zapewnia ona również bezpieczny i uregulowany przebieg transakcji oraz upowszechnia informacje, które umożliwiają ocenę aktualnej wartości papierów wartościowych.
+Zapewnia ona również bezpieczny i uregulowany przebieg transakcji oraz upowszechnia informacje, które umożliwiają ocenę aktualnej wartości papierów wartościowych.\\
 
-\textcolor{red}{Dodać informacje o różnych giełdach na świecie!}
 
 Papier wartościowy, zgodnie z prawem o obrocie papierami wartościowymi, to\\ 
 \textit{"dokument, mający stwierdzać lub stwierdzający istnienie określonego prawa majątkowego utrwalony w takim brzmieniu 
 i w taki sposób, że może stanowić samodzielny przedmiot obrotu publicznego"}\cite{ustawa_22_03_1991_papiery_wartosciowe}
 Papierami wartościowymi mogą być między innymi: akcje, obligacje, czeki, bony skarbowe. Akcje dają nabywcy (akcjonariuszowi) prawo do współwłasności w spółce, która je wyemitowała,
-co przekłada się na bezpośredni udział w wypracowanych zyskach (dywidendy), a także nabycie praw korporacyjnych, umożliwiających decyzyjność w spółce\cite{akcje}.
+co przekłada się na bezpośredni udział w wypracowanych zyskach (dywidendy), a także nabycie praw korporacyjnych, umożliwiających decyzyjność w spółce\cite{akcje}.\\
 
 Obligacje są to papiery dłużne, które poświadczają wierzytelność pomiędzy właścicielem, a dłużnikiem.
 W ich przypadku dłużnikiem jest emitent, który zobowiązuje się do uregulowania wierzytelności w określonym czasie.
 Obligacje emituje się w celu pozyskania kapitału, a obligatoriusz, czyli nabywca, otrzymuje prawo do całkowitego zwrotu inwestycji po upłynięciu określonego terminu,
 a także do otrzymywania stałego dochodu określonego odsetkami\cite{obligacje}.
 
-\textcolor{red}{Dodać akapit o danych giełdowych!}
 
 \section{Ekonometria i metody analizy danych finansowych}
-Podejmowanie decyzji inwestycyjnych na giełdzie papierów wartościowych nieuchronnie wiąże się z ryzykiem straty zainwestowanego kapitału. Zmniejszenie tego ryzyka jest więc kluczowym działaniem inwestorów, którzy oczekują wymiernych zwrotów z prowadzonych inwestycji.
+Podejmowanie decyzji inwestycyjnych na giełdzie papierów wartościowych nieuchronnie wiąże się z ryzykiem straty zainwestowanego kapitału.
+Zmniejszenie tego ryzyka jest więc kluczowym działaniem inwestorów, którzy oczekują wymiernych zwrotów z prowadzonych inwestycji.
 Ekonometria jako nauka zajmuje się dostarczeniem metod i narzędzi potrzebnych do przeprowadzenia niezbędnych analiz rynku, dzięki którym potencjalny inwestor może ocenić ryzyko inwestycyjne oraz je zminimalizować.
 Rozwój gospodarki i rynków światowych wymusza niejako wzrost zapotrzebowania na coraz to bardziej zaawansowane i dokładne narzędzia, które wspomagają podejmowanie decyzji.
 Na decyzje z kolei mają wpływ czynniki, które można podzielić na jakościowe i ilościowe\cite{ekonometria}.\\
 
 Czynniki jakościowe, ze względu na swoją naturę i duży wpływ osób dokonujących analizy, nie mogą podlegać bezpośredniej mierzalności, przez co uważane są za subiektywne\cite{ekonometria}.
-Czynniki ilościowe natomiast umożliwiają ocenę na podstawie danych liczbowych, ich wzajemnych powiązań i relacji. Są więc uważane za bardziej obiektywne, lecz nie mniej ważne.\\
+Czynniki ilościowe natomiast umożliwiają ocenę na podstawie danych liczbowych, ich wzajemnych powiązań i relacji. Są więc uważane za bardziej obiektywne.\\
 
 \subsection{Model ekonometryczny}
 Ekonometrię finansową można więc dogłębniej zdefiniować jako zastosowanie metod ilościowych do analizy zjawisk na rynku finansowym\cite{ekonometria}.\\
+
 Podstawowym krokiem, który należy postawić podczas analizy ekonometrycznej jest określenie modelu. Model jest uproszczoną reprezentacją rzeczywistego procesu, który podlega naszym badaniom\cite{ekonometria_model}.
-Powinien więc możliwie dokładnie opisywać badane procesy, z uwzględnieniem właściwych zmiennych. Proste modele z reguły upraszczają rzeczywistość, co w połączeniu z przyjętymi założeniami niekoniecznie będącymi zgodne ze stanem faktycznym pozwalają domniemywać wadliwość modelu.
+Powinien więc możliwie dokładnie opisywać badane procesy, z uwzględnieniem właściwych zmiennych.
+Proste modele z reguły upraszczają rzeczywistość, co w połączeniu z przyjętymi założeniami niekoniecznie będącymi zgodne ze stanem faktycznym pozwalają domniemywać wadliwość modelu.
 Jednakże dokładność modelu często zależy od dostępności danych. Jedna z koncepcji konstruowania modelu zakłada, że warto rozpoczynać badania od modelu prostego i w miarę poznawania dodatkowych danych, sukcesywnie zwiększać jego złożoność.\\
 
 Model ekonometryczny składa się z\cite{ekonometria_model}:
@@ -42,23 +43,26 @@ Model ekonometryczny składa się z\cite{ekonometria_model}:
 \item Opisu możliwych błędów pomiaru lub obserwacji\\
 \item Specyfikacji rozkładu prawdopodobieństwa zakłóceń i błędów pomiaru\\
 \end{itemize}
-Model jest częścią algorytmu analizy ekonometrycznej, który został przedstawiony na diagramie 1.1.
+Model jest częścią algorytmu analizy ekonometrycznej, który został przedstawiony na diagramie \ref{fig:analiza_ekonometryczna}.\\
 
 \begin{figure}
 \centering
 \includegraphics[width=7cm]{pictures/model_ekonomiczny.png}
 \caption{Schemat kroków w ekonometrycznej analizie modeli ekonomicznych}
-\label{fig:Analiza ekonometryczna}
+\label{fig:analiza_ekonometryczna}
 \end{figure}
 
-Pierwszymi krokami jakie należy wykonać podczas analizy eknometrycznej są opracowanie teorii, modelu, oraz skompletowanie niezbędnych danych. Następnie model podlega estymacji i weryfikacji, co pozwala na ocenę jego poprawności.
-Kolejne iteracje tego algorytmu prowadzą do opracowania dokłądnego modelu, który w jak najlepszym stopniu opisuje zjawisko, które jest aktualnie badane.
+Pierwszymi krokami jakie należy wykonać podczas analizy ekonometrycznej są opracowanie teorii, modelu, oraz skompletowanie niezbędnych danych.
+Następnie model podlega estymacji i weryfikacji, co pozwala na ocenę jego poprawności.
+Kolejne iteracje tego algorytmu prowadzą do opracowania dokładnego modelu, który w jak najlepszym stopniu opisuje zjawisko, które jest aktualnie badane.
 
 \subsection{Analiza techniczna}
-Analiza techniczna skupia się głównie na bezpośrednich, mierzalnych sposobach oceny aktualnej kondycji rynku. Podejmuje analizę jego aktywności, w tym cen, ilości transakcji w danym okresie czasu, poprzez badanie wzajemnych zależności oraz wzorców.\\
+Analiza techniczna skupia się głównie na bezpośrednich, mierzalnych sposobach oceny aktualnej kondycji rynku.
+Podejmuje analizę jego aktywności, w tym cen, ilości transakcji w danym okresie czasu, poprzez badanie wzajemnych zależności oraz wzorców.\\
+
 Oparta jest na trzech zasadach:\cite{tech_analysis_pillars}
 \begin{itemize}
-\item Wszystkie czynniki, które wpływają na rynkową cenę instrumentu finansowego znajdują swoje odzwieciedlenie w cenie tego instrumentu\\
+\item Wszystkie czynniki, które wpływają na rynkową cenę instrumentu finansowego znajdują swoje odzwierciedlenie w cenie tego instrumentu\\
 \item Ceny zawsze podlegają określonym trendom\\
 \item Historia się powtarza - założenie zakładające, że ceny na rynku zmieniają się i powtarzają zgodnie z określonymi wzorami, które wydarzyły się w przeszłości\\
 \end{itemize}
@@ -73,8 +77,10 @@ Klasyczna analiza techniczna opiera się na teorii Dowa, która jest pierwszą t
 Główny trend rynkowy jest trendem o największym znaczeniu, trwającym zwykle od roku do kilkunastu lat. Trendy mniejsze, trwające do trzech tygodni, są marginalizowane i utożsamiane z czynnikami losowymi, nie mającymi realnego wpływu na trend główny.
 Trendy wtórne natomiast korygują trendy główne i trwają od kilku tygodni do trzech miesięcy. Są one szczególnie ważne i utożsamiane z korektą techniczną trendu głównego.\\
 
-Trend główny dzieli się na trzy fazy. Pierwsza faza, zwana fazą akumulacji\cite{analiza_fundamentalna_techniczna} oznacza, iż podczas hossy inwestorzy skupują akcje. Faza druga charakteryzuje się przetrzymaniem akcji i niepodejmowaniem działań przez inwestorów, w oczekiwaniu na dalsze informacje.
+Trend główny dzieli się na trzy fazy. Pierwsza faza, zwana fazą akumulacji\cite{analiza_fundamentalna_techniczna} oznacza, iż podczas hossy inwestorzy skupują akcje.
+Faza druga charakteryzuje się przetrzymaniem akcji i niepodejmowaniem działań przez inwestorów, w oczekiwaniu na dalsze informacje.
 Trzecia faza natomiast związana jest ze sprzedażą akcji, a także z większym zainteresowaniem inwestorów indywidualnych, którzy w tym momencie zaczynają skupować akcje.\\
+
 W przypadku bessy, która również dzieli się na trzy fazy, faza pierwsza oznacza wyprzedaż akcji przez wtajemniczonych inwestorów, faza druga jest nasileniem tej tendencji, a faza trzecia charakteryzuje się stagnacją.\\
 
 Z opisu przebiegów trendu głównego podczas hossy i bessy wynika, że związany jest on bezpośrednio z wartościami wolumenu obrotów. Wolumen jest to łączna liczba transakcji przeprowadzonych dla danego papieru wartościowego.
@@ -96,6 +102,7 @@ Pozwala ona na przypisanie przedsiębiorstwa do jednej z czterech kategorii:
 \item Psy
 \end{itemize}
 
+\     \\
 Kategoria pierwsza, czyli gwiazdy, to przedsiębiorstwa z największym udziałem sprzedaży w odniesieniu do całego rynku, a także o najwyższej pozycji konkurencyjnej.
 Przedsiębiorstwa kategorii drugiej charakteryzują się szybkim wzrostem sprzedaży, lecz równolegle intensywnie inwestujące, przez co są pozbawione zapasów kapitału.
 Dojne krowy są stosunkowo podobne do przedsiębiorstw kategorii drugiej, lecz w ich przypadku intensywność inwestycyjna jest minimalna. Są zazwyczaj stabilne, a ich udział w rynku pozostaje na stałym poziomie.
@@ -110,7 +117,7 @@ Jej głównym zadaniem jest przyporządkowanie klas do obiektów z danego zbioru
 
 Algorytmy klasyfikacji nadzorowanej charakteryzują się dostępnością testowego zbioru danych z przypisanymi klasami, który spełnia rolę wzorca dla pozostałych danych.
 Algorytm klasyfikacji bez nadzoru pozbawiony jest tego typu informacji, często również brak jest informacji jakie klasy ma tworzyć dany zbiór.
-Zadaniem takiego algortmu jest więc wydzielenie i powiązanie ze sobą danych w taki sposób, aby stworzyć klasy i przyporządkować do nich odpowiednie dane.
+Zadaniem takiego algorytmu jest więc wydzielenie i powiązanie ze sobą danych w taki sposób, aby stworzyć klasy i przyporządkować do nich odpowiednie dane.
 
 \begin{figure}
 \centering
@@ -119,7 +126,7 @@ Zadaniem takiego algortmu jest więc wydzielenie i powiązanie ze sobą danych w
 \label{fig:Klasyfikacja nienadzorowana}
 \end{figure}
 
-Istnieje wiele algorytmów kalsyfikacji, których zastosowanie praktyczne uzależnione jest od czynników takich jak szybkość działania, zużycie pamięci, łatwość interpretacji, oraz oczywiście trafność predykcji\cite{decision_tree_classification}.\\
+Istnieje wiele algorytmów klasyfikacji, których zastosowanie praktyczne uzależnione jest od czynników takich jak szybkość działania, zużycie pamięci, łatwość interpretacji, oraz oczywiście trafność predykcji\cite{decision_tree_classification}.\\
 Wśród nich możemy wyróżnić:
 \begin{itemize}
 \item Naiwny klasyfikator Bayes'a
@@ -129,7 +136,7 @@ Wśród nich możemy wyróżnić:
 \item Liniowa analiza dyskryminacyjna
 \end{itemize}
 
-\subsubsection{Naiwny kalsyfikator Bayes'a}
+\subsubsection{Naiwny klasyfikator Bayes'a}
 W 1763 roku Thomas Bayes przestawił w swojej pracy twierdzenie teorii prawdopodobieństwa, które warunkuje prawdopodobieństwa dwóch zdarzeń warunkujących się na wzajem.\\
 Brzmi ono \cite{bayes}:
 \textit{Dla dowolnej hipotezy $h \in H$ oraz zbioru danych D zachodzi równość}
@@ -141,13 +148,13 @@ Pr(h \mid D) = \frac{Pr(h) Pr(D \mid h)}{Pr(D)}
 
 Prawdopodobieństwo \textit{Pr(h)} jest prawdopodobieństwem \textit{a priori} co oznacza, że przy jego określaniu nie były brane pod uwagę dane, które mogły mieć wpływ na jego wartość.
 Poprzez ich uwzględnienie określone zostaje prawdopodobieństwo \textit{a posteriori Pr($h \mid D$)}. Wzór Bayesa wyraża zatem związek między tymi dwoma prawdopodobieństwami,
-natomiast do jego wyrażenia używane są jeszcze prawdodopodbieństwo zaobserwowania danych \textit{Pr(D)}, oraz prawdopodobieńswto zaobserwowania tych danych przy założeniu poprawności hipotezy \textit{$Pr(D \mid h)$}.\\
+natomiast do jego wyrażenia używane są jeszcze prawdopodobieństwo zaobserwowania danych \textit{Pr(D)}, oraz prawdopodobieństwo zaobserwowania tych danych przy założeniu poprawności hipotezy \textit{$Pr(D \mid h)$}.\\
 
 W klasyfikatorze Bayes'a wybór decyzja o wyborze odpowiedniej hipotezy h ze zbioru hipotez H nie jest podejmowana na podstawie dokładności czy złożoności, lecz prawdopodobieństwa.
 Wybór dokonywany jest na podstawie dwóch sposobów, dzięki którym można uznać hipotezę za najlepszą\cite{bayes}:
 \begin{itemize}
 \item Zasada maksymalnej zgodności
-\item Zasada maksynalnego prawdopodobieństwa \textit{a posteriori}\\
+\item Zasada maksymalnego prawdopodobieństwa \textit{a posteriori}\\
 \end{itemize}
 
 Pierwsza z nich jest nazywana zasadą ML (\textit{Maximum Likelihood}) i mówi, że najlepszą jest hipoteza $h_M_L \in H$, która maksymalizuje warunkowe prawdopodobieństwo danych treningowych
@@ -167,7 +174,7 @@ h_{MAP} = arg \stackrel{h \in H}{max} Pr(h \mid T)
 \subsubsection{Drzewa decyzyjne}
 Algorytmy drzew decyzyjnych są jednymi z najszerzej stosowanych metod analizy danych za pomocą uczenia maszynowego.
 Polegają na sekwencyjnym podziale danego zbioru danych na dwa rozłączne podzbiory w taki sposób, aby oba podzbiory były możliwie jednorodne\cite{drzewa_decyzyjne}.
-Działanie drzewa decyzyjnego ilustruje Rysunek 1.3.\\
+Działanie drzewa decyzyjnego ilustruje Rysunek \ref{fig:drzewo_decyzyjne}.\\
 
 Wierzchołki drzewa oznaczone literą \textit{t} są nazywane węzłami i stanowią podzbiory zbioru danych. Węzły oznaczone okręgami są węzłami wewnętrznymi, natomiast kwadratami - węzłami zewnętrznymi.
 Dla każdego węzła określona jest funkcja podziału, która każdemu elementowi do niego należącymi przypisuje jedną z wartości : \textit{Prawdę} lub \textit{Fałsz}.\\
@@ -182,10 +189,11 @@ d_{T}(x) = \sum_{t \in T^{~}}ind(t)I(x \in t)
 \centering
 \includegraphics[width=10cm]{pictures/decision_tree.png}
 \caption{Drzewo decyzyjne}
-\label{fig:Drzewo decyzyjne}
+\label{fig:drzewo_decyzyjne}
 \end{figure}
 
-Zaletą algorytmów drzew decyzyjnych jest niewątpliwie możliwość bezproblemowego wykorzystania zarówno jakościowych jak i ilościowych do klasyfikacji. Algorytmy te wykazują również odporność na sytuacje braku części zmiennych, a także na obserwacje odstające\cite{drzewa_decyzyjne}.
+Zaletą algorytmów drzew decyzyjnych jest niewątpliwie możliwość bezproblemowego wykorzystania zarówno jakościowych jak i ilościowych do klasyfikacji.
+Algorytmy te wykazują również odporność na sytuacje braku części zmiennych, a także na obserwacje odstające\cite{drzewa_decyzyjne}.
 
 
 \subsection{Analiza regresji}

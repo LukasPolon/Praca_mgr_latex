@@ -3,10 +3,10 @@
 \chapter{Zastosowanie języka programowania Python w obliczeniach analitycznych}
 Python jest językiem programowania wysokiego poziomu, charakteryzujący się przede wszystkim wysoką klarownością i czytelnością kodu.
 Jest to język interpretowany, co w odróżnieniu od języków kompilowanych pozwala na bardzo szybkie tworzenie i testowanie kodu.
-Wadą tego rozwiązania jest niestety spadek wydajności oraz zwiększone zużycie pamięci i procesora, jednak zastosowania praktyczne Pythona zazwyczaj pozwalają na poniesienie tego typu kosztów.
+Wadą tego rozwiązania jest niestety spadek wydajności oraz zwiększone zużycie pamięci i procesora, jednak zastosowania praktyczne Pythona zazwyczaj pozwalają na poniesienie tego typu kosztów.\\
 
 Python został stworzony w 1989 roku przez Guido van Rossum, a do dzisiaj rozwijany jest jako projekt Open Source i zarządzany przez organizację non-profit Python Software Foundation.
-Jego specyficzna struktura oraz cechy takie jak dynamiczne typowanie, automatyczna zarządzanie pamięcią, przenośność, czy duża czytelność i prostota kodu, 
+Jego specyficzna struktura oraz cechy takie jak dynamiczne typowanie, automatyczne zarządzanie pamięcią, przenośność, czy duża czytelność i prostota kodu, 
 umożliwiają bardzo szybkie wytwarzanie i utrzymywanie aplikacji.\\
 
 Biblioteka standardowa języka Python zawiera wiele użytecznych modułów i gotowych rozwiązań, które wspomagają szybką i efektywną implementację kodu.
@@ -64,10 +64,11 @@ Obiekt ten ma z góry zdefiniowany typ, więc przypisanie jego referencji do kon
   >>> 
 \end{lstlisting}
 
-Jedną z najbardziej użytecznych cech Pythona jest zastosowanie elementów programowania funcyjnego. Elementami takimi są przykładowo wyrażenia \textit{lambda}, oraz \textit{list comprehension} i \textit{dict comprehension}.
-Wyrażenia \textit{lambda} pozwalają na stworzenie i przypisanie do zmiennej ktrótkiej funkcji, która jest w stanie przyjmować argumenty oraz zwracać wartości.
+Jedną z najbardziej użytecznych cech Pythona jest zastosowanie elementów programowania funkcyjnego. Elementami takimi są przykładowo wyrażenia \textit{lambda}, oraz \textit{list comprehension} i \textit{dict comprehension}.\\
+
+Wyrażenia \textit{lambda} pozwalają na stworzenie i przypisanie do zmiennej krótkiej funkcji, która jest w stanie przyjmować argumenty oraz zwracać wartości.
 Znajduje to zastosowanie w przypadkach, które wymagają wielokrotnego wykorzystania danego fragmentu kodu, a użycie ich skraca znacznie ilość wypisanych poleceń.
-Pozwala to uniknąć tworzenia wielu krótkich funkcji lub metod poza obecnie wykorzystywaną przestrzenią, co często wpływa pozytywnie przede wszsytkim na czytelność kodu.
+Pozwala to uniknąć tworzenia wielu krótkich funkcji lub metod poza obecnie wykorzystywaną przestrzenią, co często wpływa pozytywnie przede wszystkim na czytelność kodu.\\
 
 Wyrażenia \textit{list comprehension} oraz \textit{dict comprehension} wykorzystywane są do szybkiego tworzenia odpowiednio list oraz słowników.
 W swojej konstrukcji zawierają pętlę \textit{For}, która iteruje po wskazanej strukturze, na przykład liście, zwracając w każdym kroku jeden jej element.
@@ -102,11 +103,11 @@ Niemniej jednak, biorąc pod uwagę temat niniejszej pracy, którym jest przedst
 
 \section{Python w obliczeniach analitycznych}
 Język programowania Python jest bardzo dobrym narzędziem wspomagającym obliczenia analityczne.
-Cechy tego języka zapewniają skoncentrowanie się na bezpośrednim podejściu do problemu tworzenia algorytmów i modeli, minimalizując czas projektowania od podstaw skomplikowanych algorytmów pomocnicznych.
+Cechy tego języka zapewniają skoncentrowanie się na bezpośrednim podejściu do problemu tworzenia algorytmów i modeli, minimalizując czas projektowania od podstaw skomplikowanych algorytmów pomocniczych.
 Jednak największą zaletą tego języka jest dostępność wielu bibliotek z gotowymi rozwiązaniami, które mogą zostać wykorzystane do sprawnej implementacji modeli analitycznych.
 Podstawowymi bibliotekami wspomagającymi przeprowadzanie obliczeń matematycznych są \textit{NumPy} i \textit{SciPy}.\\
 
-Pierwsza z nich dostarcza przede wszystkim obiekty wielowymiarowych list oraz szereg metod i funkcji umożliwiających szybką manipulację, przetwarzanie i stortowanie.
+Pierwsza z nich dostarcza przede wszystkim obiekty wielowymiarowych list oraz szereg metod i funkcji umożliwiających szybką manipulację, przetwarzanie i sortowanie.
 Zawiera także zestaw metod pozwalających na przeprowadzanie podstawowych działań statystycznych i matematycznych\cite{numpy_ug}. Stosowana jest w wielu innych bibliotekach analitycznych, na przykład w pakiecie \textit{Scikit-learn}.\\
 
 Podstawową różnicą pomiędzy obiektami \textit{array} z pakietu \textit{NumPy}, a wbudowanymi listami języka Python jest fakt, iż podczas tworzenia obiektu ustala się stały rozmiar struktury, 
@@ -149,10 +150,10 @@ Elementami składowymi tej biblioteki są między innymi\cite{numpy_ug}:
  \item \textbf{cluster} - algorytmy klastrowania
  \item \textbf{linalg} - algebra liniowa
  \item \textbf{signal} - przetwarzanie sygnałów
- \item \textbf{stats} - funkcje i algorytmy statystyczne
+ \item \textbf{stats} - funkcje i algorytmy statystyczne\\
 \end{itemize}
 
-Funkcjonalność biblioteki jest bardzo szeroka, dzięki czemu znajduje ona zastosowanie w wielu projektach, a także jest ona częścią składową inych bibliotek analitycznych języka Python.
+Funkcjonalność biblioteki jest bardzo szeroka, dzięki czemu znajduje ona zastosowanie w wielu projektach, a także jest ona częścią składową innych bibliotek analitycznych języka Python.
 Przykładową metodą należącą do biblioteki \textit{stats} jest \textit{linregress}, która umożliwia przeprowadzenie regresji liniowej dla wskazanych danych.
 \begin{lstlisting}
  >>> from scipy import stats
@@ -177,16 +178,16 @@ Przykładową metodą należącą do biblioteki \textit{stats} jest \textit{linr
 
 \subsection{Cel i przeznaczenie pakietu}
 Biblioteka \textit{Scikit-learn} zawiera zestaw zaawansowanych narzędzi stosujących uczenie maszynowe do analizy danych w języku Python.
-Dystrybuowana jest na licencji BSD, która pozwala na modyfikowanie i rozprowadzanie kodu źródłowego, a nawet na włączanie go do produktów komercyjnych pod warunkiem unieszczenia w dokumentacji odpowiednich adnotacji dotyczących autorów.
+Dystrybuowana jest na licencji BSD, która pozwala na modyfikowanie i rozprowadzanie kodu źródłowego, a nawet na włączanie go do produktów komercyjnych pod warunkiem umieszczenia w dokumentacji odpowiednich adnotacji dotyczących autorów.
 Dzięki temu zaliczana jest do wolnego oprogramowania, które rozwijane jest przez społeczność kontrybutorów.
 Większa część kodu stworzona jest bezpośrednio w języku Python, lecz niektóre elementy takie jak na przykład implementacje SVM oraz modeli liniowych oparte są na bibliotekach języka C++, odpowiednio LibSVM oraz LibLinear\cite{scikit_article}.\\
 
-Podstawowym założeniem twórców biblioteki jest priorytetyzacja utrzymywania jakości i czytelności kodu, ponad implemenację bardzo wielu funkcji\cite{scikit_article}.
-Dodatkowo rozwijana jest wysokeij jakości kompleksowa dokumentacja, co razem stanowi bardzą dobrą bazę do rozwijania całego projektu przez wielu niezależnych deweloperów i wydawania stabilnych wersji produktu.
-Scikit-learn bazuje na trzech bibliotekach języka Python: \textit{NumPy}, \textit{SciPy} i \textit{Matplotlib}, i stanowią one wymagania systemowe, niezbędne do poprawnego działania pakietu.\\
+Podstawowym założeniem twórców biblioteki jest priorytetyzacja utrzymywania jakości i czytelności kodu, ponad implementację bardzo wielu funkcji\cite{scikit_article}.
+Dodatkowo rozwijana jest wysokiej jakości kompleksowa dokumentacja, co razem stanowi bardzo dobrą bazę do rozwijania całego projektu przez wielu niezależnych deweloperów i wydawania stabilnych wersji produktu.
+Scikit-learn bazuje na trzech bibliotekach języka Python: \textit{NumPy}, \textit{SciPy} i \textit{Matplotlib}. Stanowią one wymagania systemowe, niezbędne do poprawnego działania pakietu.\\
 
 W pakiecie \textit{Scikit-learn} algorytmy podzielone są na algorytmy uczenia z nadzorem oraz algorytmy uczenia bez nadzoru\cite{scikit_doc}.
-Pierwsze z nich operają się o podział danych na uczące i testowe, gdzie dane uczące zawierają przykładowe oczekiwane wartości na podstawie których budowany jest model.
+Pierwsze z nich opierają się o podział danych na uczące i testowe, gdzie dane uczące zawierają przykładowe oczekiwane wartości na podstawie których budowany jest model.
 W zestawie algorytmów uczenia nadzorowanego znaleźć można między innymi\cite{scikit_doc}:
 \begin{itemize}
  \item Ogólne modele liniowe
@@ -196,17 +197,17 @@ W zestawie algorytmów uczenia nadzorowanego znaleźć można między innymi\cit
  \item Algorytm k najbliższych sąsiadów
  \item Proces Gaussa
  \item Naiwny klasyfikator Bayesa
- \item Drzewa decyzyjne
+ \item Drzewa decyzyjne\\
 \end{itemize}
 
 Algorytmy uczenia bez nadzoru w pakiecie \textit{Scikit-learn}, dla których dane uczące nie posiadają żadnych wartości odniesienia, możemy natomiast podzielić między innymi na:
 \begin{itemize}
  \item Klasteryzację
  \item Estymację kowariancji
- \item Nieliniową redukcję przestrzenną
+ \item Nieliniową redukcję przestrzenną\\
 \end{itemize}
-\\
-W niniejszej pracy zastoswane zostały algorytmy uczenia z nadzorem, należące do grup: \textit{Ogólne modele liniowe}, \textcolor{red}{Uzupełnić!}
+
+W niniejszej pracy zastosowane zostały algorytmy uczenia z nadzorem.
 
 \subsection{Ogólne modele liniowe}
 W pakiecie \textit{Scikit-learn} przedstawione zostały algorytmy regresji, w których oczekiwane wartości docelowe są liniową kombinacją wartości wejściowych.
@@ -217,7 +218,7 @@ Podstawę stanowi równanie regresji:
 \end{align}
 \end{ceqn}
 
-Wektor $\omega = (\omega_{1}, ..., \omega_{p})$ jest utożsamiany z parametrem \textit{coef\_}, a wyraz wolny $\omega_{0}$ z parametrem \textit{intercept\_} \cite{scikit_doc}.
+Wektor $\omega = (\omega_{1}, ..., \omega_{p})$ jest utożsamiany z parametrem \textit{coef\_}, a wyraz wolny $\omega_{0}$ z parametrem \textit{intercept\_} \cite{scikit_doc}.\\
 
 Regresja liniowa w pakiecie \textit{Sciki-learn} dostępna jest poprzez obiekt \textbf{LinearRegression}.
 Parametry, jakie przyjmuje ten obiekt w momencie inicjalizacji to\cite{scikit_doc}:
@@ -225,7 +226,7 @@ Parametry, jakie przyjmuje ten obiekt w momencie inicjalizacji to\cite{scikit_do
  \item \textit{fit\_intercept}: boolean, optional, default True
  \item \textit{normalize}: boolean, optional, default False
  \item \textit{copy\_X}: boolean, optional, default True
- \item \textit{n\_jobs}: int, optional, default 1
+ \item \textit{n\_jobs}: int, optional, default 1\\
 \end{itemize}
 
 Parametr \textit{fit\_intercept} przyjmuje wartości typu boolean, a jego domyślna wartość wynosi \textit{True}.
@@ -256,10 +257,10 @@ Obiekt udostępnia następujące metody:
  \item \textit{get\_params}: pobranie parametrów estymacji
  \item \textit{predict}: predykcja na podstawie modelu liniowego
  \item \textit{score}: współczynnik determinacji $R^2$
- \item \textit{set\_params}: ustawienie parametrów estymacji
+ \item \textit{set\_params}: ustawienie parametrów estymacji\\
 \end{itemize}
 
-Metoda \textit{fit} jest odpowiedzialna za dopasowanie modelu dla podanych danych. Jako argumenty przyjmuje dane testowe X, które powinny być strukturą definiowaną typem \textit{numpy.ndarray}. Przykładowo:
+Metoda \textit{fit()} jest odpowiedzialna za dopasowanie modelu dla podanych danych. Jako argumenty przyjmuje dane testowe X, które powinny być strukturą definiowaną typem \textit{numpy.ndarray}. Przykładowo:
 \begin{lstlisting}
  >>> X = np.asarray([x for x in range(5)])
  >>> X
@@ -276,8 +277,8 @@ Wartości y, jako kolejny argument przyjmowany przez funkcję, powinny być zgod
 Ważną informacją jest fakt, iż struktura X oraz struktura y powinny mieć dokładnie ten sam rozmiar. W innym przypadku niemożliwe jest dokonanie dopasowania, a metoda zwraca błąd \textit{ValueError}.
 W przypadku danych giełdowych wartości X utożsamiane są przez przekształcone wartości dat kolejnych próbek danych testowych, natomiast wartości y to odpowiadające im ceny akcji lub wielkości wolumenu.\\
 
-Kolejną metodą klasy \textit{LinearRegression} jest \textit{predict}. Umożliwia ona dokonanie obliczeń predykcji dla podanych danych testowych X, na podstawie dopasowanego przy pomocy metody \textit{fit} modelu.
-Przyjmowane dane testowe powinny być zgodne zarówno typem, jak i formatem struktury z danymi testowymi X użytymi do przeprowadzenia dopasowania modelu metodą \textit{fit}.
+Kolejną metodą klasy \textit{LinearRegression} jest \textit{predict()}. Umożliwia ona dokonanie obliczeń predykcji dla podanych danych testowych X, na podstawie dopasowanego przy pomocy metody \textit{fit()} modelu.
+Przyjmowane dane testowe powinny być zgodne zarówno typem, jak i formatem struktury z danymi testowymi X użytymi do przeprowadzenia dopasowania modelu metodą \textit{fit()}.
 
 \begin{lstlisting}
  >>> import random
@@ -316,8 +317,57 @@ Najważniejszymi parametrami przyjmowanymi przez tą klasę są:
 \begin{itemize}
  \item \textit{alpha}: {float, array}
  \item \textit{kernel}: string, default \textit{linear}
- \item \textit{gamma}: float, default None
+ \item \textit{gamma}: float, default None\\
 \end{itemize}
 
-Parametr \textit{alpha}
-\textcolor{red}{UZUPEŁNIĆ!!!}
+Parametr \textit{kernel} może przyjmować wartości nazw funkcji jądra, na przykład: rbf, laplacian, polynomial lub linear. W niniejszej pracy we wszystkich nieliniowych modelach regresji zastosowano funkcję \textit{rbf}.\\
+
+Parametry \textit{alpha} i \textit{gamma} dobierane są dzięki klasie \textit{sklearn.model\_selection.GridSearchCV}, 
+która przyjmuje listy parametrów wraz z oryginalnym obiektem regresji i iterując po ich iloczynie kartezjańskim dobiera taką kombinację, która zwraca najlepsze dopasowanie metody \textit{fit{}}.
+
+\begin{lstlisting}
+ >>> krr = GridSearchCV(KernelRidge(kernel='rbf'),
+                                param_grid={
+                         "alpha": [1e0, 0.1, 1e-2, 1e-3],
+                         "gamma": np.logspace(-2, 2, 5)
+			 })
+ >>> >>> krr
+GridSearchCV(cv=None, error_score='raise',
+	     estimator=KernelRidge(alpha=1, coef0=1, degree=3,
+	                           gamma=None, kernel='rbf',
+	                           kernel_params=None),
+             fit_params={}, iid=True, n_jobs=1,
+             param_grid={'alpha': [1.0, 0.1, 0.01, 0.001], 
+                         'gamma': array([  1.00000e-02,
+                                           1.00000e-01,
+                                           1.00000e+00,
+                                           1.00000e+01,
+                                           1.00000e+02])},
+             pre_dispatch='2*n_jobs', refit=True,
+             return_train_score=True, scoring=None, verbose=0)
+ >>>             
+\end{lstlisting}
+
+Pozostałymi, zastosowanymi w pracy metodami regresji nieliniowej są:
+\begin{itemize}
+ \item Regresja Wektorów nośnych - \textit{sklearn.svm.SVR} - przyjmująca parametry \textit{C} i \textit{epsilon}
+ \item Regresja procesu Gaussa - \textit{sklearn.gaussian\_process.GaussianProcessRegressor} - przyjmująca prarmetr \textit{alpha}\\
+\end{itemize}
+
+Do przeprowadzenia procesu normalizacji danych może być użyta klasa \textit{StandardScaler} pakietu \textit{Scikit-learn}. 
+\begin{lstlisting}
+ >>> sc_x = StandardScaler()
+ >>> sc_y = StandardScaler()
+
+ >>> sort_dates = sc_x.fit_transform(dates_delta)
+ >>> sort_values = sc_y.fit_transform(sort_values)
+ 
+ >>> sort_dates = sc_x.inverse_transform(sort_dates)
+ >>> sort_values = sc_y.inverse_transform(sort_values)
+ >>>
+\end{lstlisting}
+
+Metoda \textit{fit\_transform} utworzonego obiektu klasy \textit{StandardScaler} umożliwia przeprowadzenie normalizacji, natomiast metoda \textit{inverse\_transform} umożliwia powrót do oryginalnych wartości.
+
+
+

@@ -23,7 +23,7 @@ Aplikacja została napisana w modelu orientowanym obiektowo. Starano się zachow
 
 W katalogu \textit{/client} umieszczony został kod odpowiadający za pobieranie danych giełdowych, przeprowadzanie analizy regresji, oraz generowanie wykresów.
 Katalog \textit{/drivers} zawiera mechanizmy zapisu i odczytu głównego pliku konfiguracyjnego aplikacji, oraz mechanizm bazodanowy napisany przy pomocy pakietu \textit{SqlAlchemy}.
-Ostatni katalog \textit{/gui} zawiera wszystkie elementy graficznego interfejsu użytkownika, w podziale na przyciski, układy, okna oraz pozostałe elementy.
+Ostatni katalog \textit{/gui} zawiera wszystkie elementy graficznego interfejsu użytkownika, w podziale na przyciski, układy, okna oraz pozostałe elementy.\\
 
 Przeprowadzono analizę kodu dla katalogu \textit{/mdata} programem \textit{pylint}.\\
 Według tego raportu kod aplikacji uzyskał ocenę 7.28/10 i zawiera:
@@ -38,17 +38,19 @@ Według tego raportu kod aplikacji uzyskał ocenę 7.28/10 i zawiera:
 \subsection{Dane giełdowe}
 
 Ze względu na ogromne możliwości pakietu \textit{Scikit-learn}, a także na ograniczenia dotyczące samej konstrukcji aplikacji, poczynione zostały pewne założenia definiujące działanie aplikacji.\\
+
 Główne założenia związane z pobieraniem danych giełdowych:
 \begin{itemize}
  \item Dane giełdowe pobierane są na podstawie wcześniej przygotowanej bazy firm giełdy amerykańskiej
  \item Pobieranie danych giełdowych odbywa się za pomocą API \textit{Yahoo Finance}
- \item Rodzaj danych jest determinowany jedynie przez użyte API, a ich zakres wybierany jest poprzez podanie daty początkowej i końcowej
-\end{itemize}\\
+ \item Rodzaj danych jest determinowany jedynie przez użyte API, a ich zakres wybierany jest poprzez podanie daty początkowej i końcowej\\
+\end{itemize}
 
 Zastosowane w pracy API \textit{Yahoo Finance} umożliwia pobieranie danych jedynie w jednej postaci, bez możliwości wyboru lub dodania dodatkowych elementów.
 Każde pobranie danych w tym samym zakresie powoduje otrzymanie dokładnie takich samych rezultatów, co kwalifikuje to API do udziału w analizie.
 Do bezpośredniego pobierania danych zastosowano funkcję \textit{DataReader} pakietu \textit{pandas\_datareader}.
 Umożliwia ona prostą implementację API w języku Python oraz zwracanie danych w pożądanym formacie \textit{pandas.DataFrame}.\\
+
 Dane zwracane przez API dzielą się na:
 \begin{itemize}
  \item \textit{Open}: cena początkowa (otwarcia)
@@ -101,7 +103,7 @@ Są to:
  \item Regresja Procesu Gaussa (GPR)
 \end{itemize}
 
-Przeprowadzone analizy skupiają się na róznicach pomiędzy zdolnościami predykcyjnymi wyżyej wynienionych metod regresji oraz ich zdolnościach do opisywania trendów dla danego zakresu danych.
+Przeprowadzone analizy skupiają się na róznicach pomiędzy zdolnościami predykcyjnymi wyżej wymienionych metod regresji oraz ich zdolnościach do opisywania trendów dla danego zakresu danych.
 Opisana została także różnica w dokładności metod regresji w zależności od proporcji ilości danych uczących i testowych.
 
 
@@ -109,7 +111,7 @@ Opisana została także różnica w dokładności metod regresji w zależności 
 
 \subsection{Kivy}
 \textit{Kivy} jest biblioteką języka programowania Python umożliwiającą tworzenie graficznego interfejsu użytkownika przeznaczonego na wiele platform, takich jak Windows, Linux, iOS czy Android.
-Jego główną zaletą jest możliwość oddzielenia warstwy biznesowej aplikacji od wartwy prezentacji, co wpływa zarówno na czytelność, skalowalność i ogólną jakość kodu.\\
+Jego główną zaletą jest możliwość oddzielenia warstwy biznesowej aplikacji od warstwy prezentacji, co wpływa zarówno na czytelność, skalowalność i ogólną jakość kodu.\\
 
 Są możliwe dwa warianty budowania aplikacji za pomocą tego pakietu. Pierwszy umożliwia tworzenie plików w języku \textit{Kivy Design Language}, które definiują wygląd aplikacji.
 Pliki te są następnie importowane do kodu w języku Python, a na ich podstawie generowane jest GUI.\\
@@ -164,7 +166,7 @@ Biblioteka \textit{Pandas} jest także w pełni kompatybilna z biblioteką \text
 W pracy zastosowano metodę \textit{plot()} udostępnianą przez obiekt \textit{DataFrame}, która zwraca gotowy obiekt klasy \textit{matplotlib.axes.Axes}.
 Obiekt ten, uzupełniony o niezbędne elementy i parametry, jest gotowy do wyświetlenia lub zapisania wykresu na dysku, poprzez "wyciągnięcie" figury metodą \textit{get\_figure()} i zastosowania na niej metody \textit{savefig()}.\\
 
-Przykłądowy kod generowania wykresu wyników analizy regresji, z dodaniem pionowej linii oznaczającej podział danych na uczące i testowe:
+Przykładowy kod generowania wykresu wyników analizy regresji, z dodaniem pionowej linii oznaczającej podział danych na uczące i testowe:
 \begin{lstlisting}
  df_reg_results = self.reg_data['df_all_results']
  
@@ -230,7 +232,7 @@ Obiekt klasy \textit{sklearn.linear\_model.LinearRegression} został użyty do p
 \end{lstlisting}
 Pierwszym krokiem jest stworzenie obiektu \textit{linear\_reg}, podając jako argument \textit{fit\_intercept=False}.
 Tak przygotowany obiekt udostępnia metodę \textit{fit()}, której argumentami są zbiory danych uczących, odpowiednio dat i cen akcji.
-Metoda ta przygotowuje model do predykcji, którą wykonuje się za pomocą kolejnej metody \textit{predict()}, jako argumenty podając zbiór wszstkich dat, zarówno testowych jak i uczących.
+Metoda ta przygotowuje model do predykcji, którą wykonuje się za pomocą kolejnej metody \textit{predict()}, jako argumenty podając zbiór wszystkich dat, zarówno testowych jak i uczących.
 Pozwala to na stworzenie prostej regresji dla całego zbioru danych.\\
 
 Klasa \textit{sklearn.kernel\_ridge.KernelRidge} pozwala na przeprowadzenie analizy regresji grzbietowej która, zaliczając się do regresji nieliniowych, została wzbogacona o obiekt klasy \textit{sklearn.model\_selection.GridSearchCV}:
@@ -309,7 +311,7 @@ Do zapisania konfiguracji służy przycisk \textit{Save} który, ze względu na 
 W przypadku niepowodzenia użytkownikowi zostaje wskazane pole, które zostało źle wypełnione.\\
 
 Lista firm, dla których jest możliwość pobrania danych znajduje się w zablokowanym polu tekstowym z prawej strony okna.
-Jako, iż istnieje możliwość kopiowania tekstu z tego pola, aby wypełnić paramter \textit{Company} należy skopiować dokładną nazwę firmy i wkleić ją we właściwe miejsce.
+Jako, iż istnieje możliwość kopiowania tekstu z tego pola, aby wypełnić parametr \textit{Company} należy skopiować dokładną nazwę firmy i wkleić ją we właściwe miejsce.
 Przycisk \textit{Next} pozwala natomiast na wyświetlenie kolejnej części listy firm, która jest posortowana alfabetycznie.
 
 \subsection{Okno analizy regresji}
@@ -323,7 +325,7 @@ W oknie analizy regresji użytkownik może przeprowadzić operacje: pobrania dan
 \end{figure}
 
 Z prawej strony okna znajduje się pasek menu z przyciskami: \textit{Load stock data}, \textit{Regression analyze} oraz \textit{Save}.
-Z lewej strony znajduje się nastomiast zablokowane pole tekstowe, w którym pojawiają się wyniki i informacje.
+Z lewej strony znajduje się natomiast zablokowane pole tekstowe, w którym pojawiają się wyniki i informacje.
 W centralnej części obecne są przyciski, które są odpowiedzialne za wyświetlanie odpowiednich wykresów:
 \begin{itemize}
  \item \textit{Open/Close price data diagram}
