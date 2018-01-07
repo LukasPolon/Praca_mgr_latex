@@ -12,7 +12,7 @@ Dane wykorzystane do testów były cenami otwarcia.\\
 
 Każdy przeprowadzony test uwzględnia wyliczenie dwóch wartości: średniego błędu kwadratowego oraz wyniku predykcji.\\
 
-Średni błąd kwadratowy liczony jest poprzez wykorzystanie funkcji \textit{sklearn.metrics.mean\_squared\_error} z pakietu \textit{Scikit-learn}, a jego wartość w wypadku predykcji idealnej wynosi zero.
+Średni błąd kwadratowy liczony jest poprzez wykorzystanie funkcji\\ \textit{sklearn.metrics.mean\_squared\_error} z pakietu \textit{Scikit-learn}, a jego wartość w wypadku predykcji idealnej wynosi zero.
 Liczony jest na podstawie wartości predykcji dla danych testowych.
 Wynik predykcji jest natomiast liczony poprzez wywołanie metody \textit{score()} obieku danego modelu regresji, a jego wartość zmierza do osiągnięcia 1.0 w przypadku idealnym.
 Liczony jest na podstawie wyników predykcji zarówno dla zbioru uczącego jak i testowego.\\
@@ -101,6 +101,8 @@ Zauważalne jest jedynie delikatne przesunięcie prostej regresji w kierunku cen
 
 Rysunki \ref{fig:microsoft_krr_20}, \ref{fig:microsoft_krr_50} i \ref{fig:microsoft_krr_80} przedstawiają wyniki regresji grzbietowej dla 20\%, 50\% i 80\% użytych danych uczących.\\
 
+\newpage
+
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.4]{pictures/plots/microsoft_krr_20.png}
@@ -120,6 +122,8 @@ Odchylenie jest zauważalne dopiero przy końcowej części danych testowych. Fa
 
 W porównaniu do rysunku \ref{fig:microsoft_krr_20}, powyższy wykres przedstawia wynik bardziej dokładny i dopasowany.
 Zaznaczony jest wyraźny trend wzrostowy z dopasowanymi krzywiznami, które trafnie pokrywają dużą część danych testowych.\\
+
+\newpage
 
 \begin{figure}[ht]
 \centering
@@ -152,8 +156,6 @@ Krzywa regresji po osiągnięciu granicy danych uczących, znacząco odchyla si�
 \caption{Wykres regresji wektorów nośnych dla 50\% danych uczących, Microsoft}
 \label{fig:microsoft_svr_50}
 \end{figure}
-
-\newpage
 
 W odróżnieniu od krzywej regresji na rysunku \ref{fig:microsoft_svr_20}, w powyższym przypadku krzywa ta poprawnie przewiduje trend wzrostowy.
 Jednakże odchylenie krzywej w stronę górną jest tak silne, że wraz ze wzrostem wartości na osi X wykresu, spada dopasowanie danych.\\
@@ -189,6 +191,8 @@ Spowodowane to może być zbyt małą ilością użytych danych uczących, któr
 \label{fig:microsoft_gpr_50}
 \end{figure}
 
+\newpage
+
 Wykres na rysunku \ref{fig:microsoft_gpr_50} powtarza tendencję z wykresu na rysunku \ref{fig:microsoft_gpr_20}.
 Trend wzrostowy jest poprawnie przewidywany jedynie dla początkowych wartości danych testowych, a następnie występuje odchylenie krzywej regresji w dół.\\
 
@@ -212,8 +216,6 @@ Podczas dokonanych analiz zebrano dane odnośnie wartości średniego błędu kw
 \caption{Wykres zmian wartości średniego błędu kwadratowego, Microsoft}
 \label{fig:microsoft_mean_square}
 \end{figure}
-
-\newpage
 
 \begin{figure}[ht]
 \centering
@@ -245,7 +247,7 @@ Na podstawie zgromadzonych wykresów, a także powyższych danych, można okreś
 \section{Testy zbioru danych: Intel}
 
 \subsection{Informacje ogólne}
-Zakres danych użytych do testów wynosi 81 próbek, w przedziale dat od 2017-01-01 do 2017-14-30 z krokiem wynoszącym jeden dzień.\\
+Zakres danych użytych do testów wynosi 81 próbek, w przedziale dat od 2017-01-01 do 2017-04-30 z krokiem wynoszącym jeden dzień.\\
 Zakres ten charakteryzuje się mniejszą ilością danych o większej zmienności, niż zakres poprzedni.
 
 \begin{figure}[ht]
@@ -263,8 +265,6 @@ Ilość próbek danych uczących i testowych wynosi odpowiednio:
  \item 40/41 dla wartości 50\% danych uczących
  \item 64/17 dla wartości 80\% danych uczących
 \end{itemize}
-
-\newpage
 
 \subsection{Regresja liniowa}
 

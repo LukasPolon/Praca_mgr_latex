@@ -152,7 +152,22 @@ showstringspaces=false
 %%
 \begin{streszczenie}
 %%
-Przykładowe streszczenie i test polskich znaków: ąśćżźłóęą
+Analiza danych giełdowych udostępnianych przez Giełdy Papierów Wartościowych od samego początku stanowi wyzwanie inwestorów.
+Jej wynik pozwala podejmować decyzje finansowe, które obarczone są mniejszym ryzykiem straty, a także pozwala przewidywać przyszłe trendy i zmiany kursów.
+Podział na anlizę fundamentalną orez techniczną jest istotny z punktu widzenia narzędzi stosowanych do jej przeprowadzenia.
+Analiza techniczna, której elementy są częścią niniejszej pracy, skupia się głównie na analizie wykresów surowych danych giełdowych, ich opisie oraz określaniu trendów.
+Jeden z rodzajów danych możliwych do analizy to ceny akcji poszczególnych spółek.
+Dane te, udostępnione przez API \textit{Yahoo Finance}, są przedmiotem przeprowadzanych analiz zamieszczonych w niniejszej pracy.\\
+
+Język programowania Python jest interpretowanym, dynamicznie typowanym językiem wysokiego poziomu.
+Jego cechy, wśród których można wyróżnić przede wszystkim szybkie wytwarzanie oraz utrzymywanie kodu oraz mnogość dodatkowych bibliotek, 
+stwarzają bardzo dobre warunki do wykorzystania go do przeprowadzania analiz statystycznych, matematycznych oraz finansowych.\\
+
+Biblioteka \textit{Scikit-learn} jest jednym z najbardziej rozbudowanych pakietów języka programowania Python, służących do analizy danych metodami uczenia maszynowego.
+Udostępnia ona klasy, dzięki którym można wykonać analizy regresji liniowych, nieliniowych, czy również dokonać klasyfikacji.\\
+
+Dla celów niniejszej pracy sporządzono aplikację, która pobiera dane giełdowe określonej spółki, a następnie dokonuje analizy regresji podanym przez użytkownika modelem spośród: regresji liniowej, grzbietowej, wektorów nośnych oraz procesu Gaussa.
+Celem pracy jest porównanie tych modeli regresji oraz wyciągnięcie wniosków dotyczących ich możliwości predykcyjnych, a także anlizy trendów.
 
 %
 %  <Treść streszczenia po polsku>
@@ -160,13 +175,27 @@ Przykładowe streszczenie i test polskich znaków: ąśćżźłóęą
 %%
 \end{streszczenie}
 %%
-%% ------- ANGIELSKIE ------- %%
 %%
 \begin{abstract}
 %%
 %
-%  <Treść streszczenia po angielsku>
-%
+Stock data analysis, which are shared by Stock Exchanges, from the very beginning is a challenge for many investors.
+Its results allow to make financial decisions, which are less burdned with risk of loss. Besides, it allows to predict future trends and course changes.
+Division into technical analysis and fundamental analysis is very important from the point of view of tools, which are used to carry out the analysis.
+Technical analysis, which elements are part of this work, focuses mainly on plot data anlysis, their description and trends determination.
+One of data types, which are possible to analyze are stock market's shares pices.
+That data, which is shared by \textit{Yahoo Finance} API, is the subject of analysis included in this work.\\
+
+Python is a high-level, interpreted and dynamically-typed programming language.
+Its features, among which we can distinguish fast code production and maintenance, as well as high amount of additional libraries, create very good conditions for using it for statistical, mathematical and financial analysis.\\
+
+\textit{Scikit-learn} library is one of the most extensive Python packages used for machine learning analysis.
+It provides classes, by which is a possibility to do the linear and non-linear regression analysis, as well as classification analysis.\\
+
+Application has been created for this work purposes. This application collects stock data and analyzes it by one of four regression methods: linear, ridge, supprot vector and Gauss process.
+The purpose of this work is comparison of these regression models and to draw conclusions about its prediction capabilites, as well as trends analysis.
+
+
 %%
 \end{abstract}
 %%
@@ -270,11 +299,11 @@ https://www.investopedia.com/terms/s/stockmarket.asp
 \bibitem{akcje} Roman Ciepiela, Piotr Pytlik, Magda Wiernusz,
 \textit{Encyklopedia Zarządzania}\\
 25 Październik 2016.\\
-https://mfiles.pl/pl/index.php/Akcje
+mfiles.pl/pl/index.php/Akcje
 
 \bibitem{obligacje} Roman Ciepiela, Szymon Kułakowski, Sabina Blok,
 \textit{Encyklopedia Zarządzania}, 13 Lipiec 2017
-https://mfiles.pl/pl/index.php/Obligacje
+mfiles.pl/pl/index.php/Obligacje
 
 \bibitem{ekonometria} Małgorzata Łuniewska
 \textit{Ekonometria Finansowa: Analiza rynku kapitałowego}, Warszawa 2008
@@ -283,7 +312,7 @@ Wydawnictwo Naukowe PWN
 \bibitem{tech_analysis_pillars} Stockopedia
 \textit{Technical Analysis (Part 1): History, Theory and Philosophy}\\
 Kwiecień 2017\\
-https://www.stockopedia.com/content/technical-analysis-part-1-history-theory-and-philosophy-179598/
+www.stockopedia.com/content/technical-analysis-part-1-history-theory-and-philosophy-179598/
 
 \bibitem{ekonometria_model} G.S. Maddala
 \textit{Ekonometria} Warszawa 2006\\
@@ -365,11 +394,12 @@ Packt Publishing
 %
 \listoffigures
 %
-\listoftables
+% \listoftables
 
-\renewcommand{\lstlistlistingname}{Spis listingów}
-\lstlistoflistings
-\addcontentsline{toc}{chapter}{Spis listingów}
+%\renewcommand{\lstlistlistingname}{Spis listingów}
+%\lstlistoflistings
+%\addcontentsline{toc}{chapter}{Spis listingów}
+
 %
 %\printindex  % jeżeli do pracy dołączony jest indeks
 %%
