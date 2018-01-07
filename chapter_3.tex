@@ -61,6 +61,8 @@ Dane zwracane przez API dzielą się na:
  \item \textit{Volume}: wartość wolumenu
 \end{itemize}
 
+\newpage
+
 Przykładowe zastosowanie funkcji \textit{DataReader} do pobierania danych giełdowych za pomocą API \textit{Yahoo Finance}:
 
 \begin{lstlisting}
@@ -277,11 +279,11 @@ Aplikacja podzielona jest na trzy okna:
 \end{itemize}
 
 Po uruchomieniu aplikacji użytkownikowi jako pierwsze przedstawiane jest okno instrukcji, które zawiera schemat kroków potrzebnych do poprawnego przeprowadzenia analizy.
-\begin{figure}[h!]
+\begin{figure}[ht]
 \centering
-\includegraphics[width=150mm]{pictures/app_info_screen.png}
+\includegraphics[scale=0.4]{pictures/app_info_screen.png}
 \caption{Aplikacja: okno instrukcji}
-\label{fig:Okno instrukcji}
+\label{fig:app_instrukcja}
 \end{figure}
 
 Z lewej strony dostępny jest pasek menu, który zawiera przyciski: \textit{Info}, \textit{Options}, \textit{Regression analysis} oraz \textit{Exit}.
@@ -289,11 +291,14 @@ Każdy z nich pozwala na wyświetlenie innego okna aplikacji, z wyjątkiem przyc
 
 \subsection{Okno opcji}
 W oknie opcji użytkownik może zmienić lub ustawić parametry, które będą używane w późniejszej analizie regresji.
-\begin{figure}[h!]
+
+\newpage
+
+\begin{figure}[ht]
 \centering
-\includegraphics[width=150mm]{pictures/app_options_screen.png}
+\includegraphics[scale=0.4]{pictures/app_options_screen.png}
 \caption{Aplikacja: okno opcji}
-\label{fig:Okno opcji}
+\label{fig:app_okno_opcji}
 \end{figure}
 
 Parametry możliwe do zmiany to:
@@ -317,11 +322,13 @@ Przycisk \textit{Next} pozwala natomiast na wyświetlenie kolejnej części list
 \subsection{Okno analizy regresji}
 W oknie analizy regresji użytkownik może przeprowadzić operacje: pobrania danch giełdowych i przeprowadzenia analizy, zgodnie z parametrami ustawionymi w oknie opcji.
 
-\begin{figure}[h!]
+\newpage
+
+\begin{figure}[ht]
 \centering
-\includegraphics[width=150mm]{pictures/app_reg_screen_data_loaded.png}
+\includegraphics[scale=0.4]{pictures/app_reg_screen_data_loaded.png}
 \caption{Aplikacja: okno analizy regresji (pobrane dane giełdowe)}
-\label{fig:Okno analizy regresji}
+\label{fig:app_okno_reg}
 \end{figure}
 
 Z prawej strony okna znajduje się pasek menu z przyciskami: \textit{Load stock data}, \textit{Regression analyze} oraz \textit{Save}.
@@ -335,11 +342,11 @@ W centralnej części obecne są przyciski, które są odpowiedzialne za wyświe
  \item \textit{Regression train data diagram}
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
 \centering
-\includegraphics[width=150mm]{pictures/app_reg_screen_plot.png}
+\includegraphics[scale=0.4]{pictures/app_reg_screen_plot.png}
 \caption{Aplikacja: Wykres rezultatu analizy regresji}
-\label{fig:Wykres rezultatu analizy regresji}
+\label{fig:app_regresja}
 \end{figure}
 
 Pierwsze trzy wykresy przedstawiają niemodyfikowane dane giełdowe pobrane za pomocą przycisku \textit{Load stock data} i tylko po jego wciśnięciu będą dostępne.
@@ -351,12 +358,14 @@ Wyróżnić można natomiast trzy główne funkcje aplikacji, które przedstawio
 
 \subsection{Zapis parametrów w oknie opcji}
 Pierwszą główną funkcją aplikacji jest zapis wybranych przez użytkownika parametrów do pliku konfiguracyjnego.\\
-\begin{figure}[h!]
+\begin{figure}[ht]
 \centering
-\includegraphics[width=150mm,heigh=100mm]{pictures/uml_save.png}
+\includegraphics[scale=0.3]{pictures/uml_save.png}
 \caption{Diagram UML: zapis parametrów w oknie opcji}
-\label{fig:Diagram UML: zapis parametrów w oknie opcji}
+\label{fig:uml_zapis}
 \end{figure}
+
+\newpage
 
 Podstawową klasą jest \textit{OptionsScreenLayout}, która dziedziczy po klasie \textit{FloatLayout} należącej do biblioteki \textit{Kivy}, 
 a także implementuje klasy odpowiedzialne za zarządzenie konfiguracją (\textit{ConfigManagement}) oraz za przycisk zapisu konfiguracji (\textit{SaveButton}.)\\
@@ -366,23 +375,25 @@ Dwie klasy odpowiedzialne za implementację list rozwijanych dodatkowo implement
 
 \subsection{Pobieranie danych giełdowych}
 Kolejną funkcją aplikacji przedstawioną na schemacie UML jest mechanizm pobierania danych giełdowych.\\
-\begin{figure}[h!]
+\begin{figure}[ht]
 \centering
-\includegraphics[width=150mm,heigh=100mm]{pictures/uml_load_data.png}
+\includegraphics[scale=0.3]{pictures/uml_load_data.png}
 \caption{Diagram UML: pobierane danych giełdowych}
-\label{fig:Diagram UML: pobieranie danych giełdowych}
+\label{fig:uml_pobieranie}
 \end{figure}
 
 Przycisk odpowiedzialny za akcję, \textit{LoadDataButton}, dziedziczy po klasie \textit{Button} biblioteki \textit{Kivy}, oraz implementuje klasy zarządzania konfiguracją oraz pobierania danch (\textit{DataDownload}).
 Klasa odpowiadająca za pobieranie danych implementuje natomiast bazodanową klasę \textit{Operations}, która wraz z \textit{CompanyInfo} oraz \textit{DbDriver} umożliwiają dostęp do bazy danych nazw i znaczników giełdowych firm.\\
 
+\newpage
+
 \subsection{Analiza regresji}
 Ostatnią przedstawioną funkcją aplikacji jest przeprowadzanie analizy regresji.\\
-\begin{figure}[h!]
+\begin{figure}[ht]
 \centering
-\includegraphics[width=150mm,heigh=100mm]{pictures/uml_regression.png}
+\includegraphics[scale=0.3]{pictures/uml_regression.png}
 \caption{Diagram UML: analiza regresji}
-\label{fig:Diagram UML: analiza regresji}
+\label{fig:uml_reg}
 \end{figure}
 
 Przycisk \textit{RegressionAnalyzeButton} implementuje zarówno klasy \textit{PlotsGenerate}, \textit{ConfigManagement} oraz \textit{Regression}.

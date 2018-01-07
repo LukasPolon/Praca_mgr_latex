@@ -45,9 +45,11 @@ Model ekonometryczny składa się z\cite{ekonometria_model}:
 \end{itemize}
 Model jest częścią algorytmu analizy ekonometrycznej, który został przedstawiony na diagramie \ref{fig:analiza_ekonometryczna}.\\
 
-\begin{figure}
+\newpage
+
+\begin{figure}[ht]
 \centering
-\includegraphics[width=7cm]{pictures/model_ekonomiczny.png}
+\includegraphics[scale=0.5]{pictures/model_ekonomiczny.png}
 \caption{Schemat kroków w ekonometrycznej analizie modeli ekonomicznych}
 \label{fig:analiza_ekonometryczna}
 \end{figure}
@@ -119,9 +121,9 @@ Algorytmy klasyfikacji nadzorowanej charakteryzują się dostępnością testowe
 Algorytm klasyfikacji bez nadzoru pozbawiony jest tego typu informacji, często również brak jest informacji jakie klasy ma tworzyć dany zbiór.
 Zadaniem takiego algorytmu jest więc wydzielenie i powiązanie ze sobą danych w taki sposób, aby stworzyć klasy i przyporządkować do nich odpowiednie dane.
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
-\includegraphics[width=10cm]{pictures/unsupervised_classification.png}
+\includegraphics[scale=0.6]{pictures/unsupervised_classification.png}
 \caption{Klasyfikacja nienadzorowana}
 \label{fig:Klasyfikacja nienadzorowana}
 \end{figure}
@@ -176,6 +178,15 @@ Algorytmy drzew decyzyjnych są jednymi z najszerzej stosowanych metod analizy d
 Polegają na sekwencyjnym podziale danego zbioru danych na dwa rozłączne podzbiory w taki sposób, aby oba podzbiory były możliwie jednorodne\cite{drzewa_decyzyjne}.
 Działanie drzewa decyzyjnego ilustruje Rysunek \ref{fig:drzewo_decyzyjne}.\\
 
+\newpage
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{pictures/decision_tree.png}
+\caption{Drzewo decyzyjne}
+\label{fig:drzewo_decyzyjne}
+\end{figure}
+
 Wierzchołki drzewa oznaczone literą \textit{t} są nazywane węzłami i stanowią podzbiory zbioru danych. Węzły oznaczone okręgami są węzłami wewnętrznymi, natomiast kwadratami - węzłami zewnętrznymi.
 Dla każdego węzła określona jest funkcja podziału, która każdemu elementowi do niego należącymi przypisuje jedną z wartości : \textit{Prawdę} lub \textit{Fałsz}.\\
 Klasyfikatory zbudowane na podstawie drzewa decyzyjnego mają więc postać\cite{drzewa_decyzyjne}:
@@ -184,13 +195,6 @@ Klasyfikatory zbudowane na podstawie drzewa decyzyjnego mają więc postać\cite
 d_{T}(x) = \sum_{t \in T^{~}}ind(t)I(x \in t)
 \end{align}
 \end{ceqn}
-
-\begin{figure}
-\centering
-\includegraphics[width=10cm]{pictures/decision_tree.png}
-\caption{Drzewo decyzyjne}
-\label{fig:drzewo_decyzyjne}
-\end{figure}
 
 Zaletą algorytmów drzew decyzyjnych jest niewątpliwie możliwość bezproblemowego wykorzystania zarówno jakościowych jak i ilościowych do klasyfikacji.
 Algorytmy te wykazują również odporność na sytuacje braku części zmiennych, a także na obserwacje odstające\cite{drzewa_decyzyjne}.
